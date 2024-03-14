@@ -37,11 +37,6 @@ export default [
     },
     rules: {
       'import/exports-last': 'error',
-      'import/extensions': ['error', { ts: 'always' }],
-      'import/group-exports': 'error',
-      'import/no-commonjs': 'error',
-      'import/no-namespace': 'error',
-      'import/no-unassigned-import': 'error',
       'unicorn/no-unused-properties': 'error',
       'unicorn/string-content': 'error',
     },
