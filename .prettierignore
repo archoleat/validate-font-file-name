@@ -1,0 +1,6 @@
+.ecrc
+.gitignore
+.gitmodules
+.prettierignore
+*.md
+pnpm-lock.yaml
