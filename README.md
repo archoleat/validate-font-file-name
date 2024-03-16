@@ -1,4 +1,4 @@
-# Archoleat Repo Template
+# Validate Font File Name
 
 ![NPM Version](https://img.shields.io/npm/v/%40archoleat%2Fvalidate-font-file-name)
 ![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fvalidate-font-file-name)
@@ -51,14 +51,38 @@ console.log(validateFontFileName(invalidFontFileName))
 // [VALIDATOR]: The font file name 'OpenSans.woff2' doesn't match the 'FontFamily-Fontweight.{otf|ttf|woff|woff2}' template.
 ```
 
+or
+
+```js
+import validateFontFileName from '@archoleat/validate-font-file-name';
+
+const validFontFileName = 'OpenSans-Regular.woff2';
+const invalidFontFileName = 'OpenSans.woff2';
+
+console.log(validateFontFileName(validFontFileName))
+// [VALIDATOR]: There's no naming errors!
+
+console.log(validateFontFileName(invalidFontFileName))
+// [VALIDATOR]: The font file name 'OpenSans.woff2' doesn't match the 'FontFamily-Fontweight.{otf|ttf|woff|woff2}' template.
+```
+
 ## Troubleshooting
 
-If you are using **npm** you may get an error related to these plugins:
+If you are using **npm**, you may get a `peerDependency` error
+that is related to these plugins:
 
 -   `typescript-eslint/eslint-plugin`.
 -   `typescript-eslint/parser`.
 
-To fix this you can switch to **pnpm**(recommended) or install version `6.0.0`.
+To fix this you can switch to **pnpm**(recommended) or install version `6.0.0`:
+
+```shell
+typescript-eslint/eslint-plugin@6.0.0
+```
+
+```shell
+typescript-eslint/parser@6.0.0
+```
 
 ## Contributing
 
