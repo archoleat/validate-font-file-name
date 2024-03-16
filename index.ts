@@ -42,7 +42,7 @@ const validateFontFileName = (file: string) => {
   const FONT_FILE_NAME_PATTERN = new RegExp(
     `${FAMILY_PATTERN}-${WEIGHT_PATTERN}\\.${EXTENSION_PATTERN}`,
   );
-  const fileName = file.substring(file.lastIndexOf('/') + 1, file.lastIndexOf(''));
+  const fileName = file.slice(file.lastIndexOf('/') + 1, file.lastIndexOf(''));
   const match = FONT_FILE_NAME_PATTERN.test(fileName);
 
   if (!match) {
