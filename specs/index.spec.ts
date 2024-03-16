@@ -52,6 +52,10 @@ describe('Validate Font File Name', () => {
     expect(validateFontFileName('openSans-Semibold.woff2')).equal(false);
   });
 
+  it('open-Semibold.woff2', () => {
+    expect(validateFontFileName('open-Semibold.woff2')).equal(false);
+  });
+
   it('OpenSans-semibold.woff2', () => {
     expect(validateFontFileName('OpenSans-semibold.woff2')).equal(false);
   });
