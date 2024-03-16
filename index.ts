@@ -1,21 +1,19 @@
 import chalk from 'chalk';
 
 /**
- * The asynchronous function `validateFontFileName` checks if a given
- * file path matches the pattern 'FontFamily-FontWeight.ext'.
+ * The function `validateFontFileName` checks if a given font
+ * file name follows a specific naming convention.
  *
- * @param {string} filePath - The `filePath` parameter is a string
- * that represents the file path of a font file. The function
- * `validateFontFileName` uses a regular expression pattern to check
- * if the file name follows the format 'FontFamily-FontWeight.ext'.
+ * @param {string} file - The `validateFontFileName` function takes
+ * a `file` parameter, which is expected to be a string representing
+ * the file name of a font file.
  *
- * @returns If the font file name does not match the pattern,
- * a warning message is logged using `console.warn` and the
- * function does not explicitly return a value
- * (implicitly returns `undefined`).
+ * @returns The `validateFontFileName` function returns a boolean
+ * value - `true` if the font file name matches the specified template
+ * 'FontFamily-Fontweight.{otf|ttf|woff|woff2}', and `false` if it
+ * doesn't match the template.
  */
-
-const validateFontFileName = (filePath: string) => {
+const validateFontFileName = (file: string) => {
   const LETTERS_PATTERN = '[A-Z][a-z]';
   const FONT_FAMILY_PATTERN = `^${LETTERS_PATTERN}+(${LETTERS_PATTERN}+)?`;
   const FONT_WEIGHT_PATTERN = [
@@ -44,12 +42,13 @@ const validateFontFileName = (filePath: string) => {
   const FONT_FILE_NAME_PATTERN = new RegExp(
     `${FAMILY_PATTERN}-${WEIGHT_PATTERN}\\.${EXTENSION_PATTERN}`,
   );
-  const match = FONT_FILE_NAME_PATTERN.test(filePath);
+  const fileName = file.substring(file.lastIndexOf('/') + 1, file.lastIndexOf(''));
+  const match = FONT_FILE_NAME_PATTERN.test(fileName);
 
   if (!match) {
     console.warn(
       chalk.yellow.bold(
-        `[VALIDATOR]: The font file name '${filePath}' doesn't match the 'FontFamily-Fontweight.{otf|ttf|woff|woff2}' template.`,
+        `[VALIDATOR]: The font file name '${fileName}' doesn't match the 'FontFamily-Fontweight.{otf|ttf|woff|woff2}' template.`,
       ),
     );
 
