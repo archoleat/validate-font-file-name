@@ -15,7 +15,7 @@ import chalk from 'chalk';
  * 'FontFamily-Fontweight.{otf|ttf|woff|woff2}', and `false` if it
  * doesn't match the template.
  */
-const validateFontFileName = (file: string) => {
+const validateFontFileName = async (file: string) => {
   const LETTERS_PATTERN = '[A-Z][a-z]';
   const FONT_FAMILY_PATTERN = `^${LETTERS_PATTERN}+(${LETTERS_PATTERN}+)?`;
   const FONT_WEIGHT_PATTERNS = [
