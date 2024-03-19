@@ -1,80 +1,102 @@
 {
-  "type": "module",
-  "exports": {
-    "./*": "./commitlint.config.ts",
-    "./src/index.ts": "./src/index.ts"
-  },
-  "types": "index.d.ts",
-  "author": "Archoleat",
-  "email": "archoleat@gmail.com",
-  "name": "@archoleat/repo",
-  "description": "",
+  "name": "@archoleat/validate-font-file-name",
+  "description": "Checking font file names for standardization",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": [],
-  "homepage": "https://github.com/archoleat/repo-template#readme",
+  "author": {
+    "email": "archoleat@gmail.com",
+    "name": "Archoleat",
+    "url": "https://github.com/archoleat"
+  },
+  "homepage": "https://github.com/archoleat/validate-font-file-name#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/archoleat/repo-template.git"
+    "url": "git+https://github.com/archoleat/validate-font-file-name.git"
   },
   "bugs": {
-    "url": "https://github.com/archoleat/repo-template/issues"
+    "url": "https://github.com/archoleat/validate-font-file-name/issues"
   },
+  "keywords": [
+    "archoleat",
+    "font-file-name-standard",
+    "font-file-name",
+    "naming",
+    "standard",
+    "validate-font-file-name",
+    "validate-name",
+    "validate",
+    "validator"
+  ],
+  "packageManager": "pnpm@8.15.5",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "volta": {
+    "node": "20.11.1",
+    "pnpm": "8.15.5"
+  },
+  "type": "module",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./commitlint.config.ts"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "init": "pnpm i && husky && git submodule update",
-    "test": "mocha",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "rollup -c",
     "release": "semantic-release",
     "lint:editorconfig": "editorconfig-checker",
     "lint:formatting": "prettier . --check",
     "lint:md": "remark . --quiet",
-    "lint:ts": "eslint src/**/*.ts --fix",
+    "lint:ts": "eslint index.ts --fix",
     "prettify": "prettier . --write",
     "commit": "cz"
   },
-  "engines": {
-    "node": ">=20.11.0",
-    "pnpm": ">=8.15.3"
+  "dependencies": {
+    "chalk": "^5.3.0"
   },
-  "volta": {
-    "node": "20.11.0",
-    "pnpm": "8.15.3"
-  },
-  "files": [
-    "src"
-  ],
   "devDependencies": {
+    "@archoleat/semantic-release-define-config": "^1.1.0",
     "@commitlint/cli": "^18.6.1",
-    "@commitlint/config-conventional": "^18.6.2",
+    "@commitlint/config-conventional": "^18.6.3",
     "@commitlint/types": "^18.6.1",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/chai": "^4.3.12",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.25",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "chai": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "@vitest/coverage-v8": "^1.4.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "editorconfig-checker": "^5.1.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-define-config": "^2.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-unicorn": "^51.0.1",
     "globals": "^14.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "mocha": "^10.3.0",
-    "mocha-spec-reporter-with-file-names": "^0.0.3",
     "prettier": "^3.2.5",
     "remark": "15.0.1",
     "remark-cli": "^12.0.0",
     "remark-preset-lint-consistent": "^5.1.2",
     "remark-preset-lint-markdown-style-guide": "^5.1.3",
     "remark-preset-lint-recommended": "^6.1.3",
-    "semantic-release": "^23.0.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "rollup": "^4.13.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "semantic-release": "^23.0.5",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
   }
 }

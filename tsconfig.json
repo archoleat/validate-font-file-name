@@ -1,28 +1,26 @@
 {
   "compilerOptions": {
-    "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "composite": true,
+    "declaration": true,
     "disableReferencedProjectLoad": true,
+    "emitDeclarationOnly": true,
     "exactOptionalPropertyTypes": true,
-    "lib": ["ES6", "DOM"],
+    "lib": ["ESNext", "DOM"],
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "noEmit": true,
-    "noErrorTruncation": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist",
+    "outDir": "",
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES6",
-    "types": ["chai", "mocha", "node"]
-  }
+    "target": "ESNext",
+    "types": ["vitest"]
+  },
+  "include": ["index.ts"]
 }

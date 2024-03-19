@@ -1,269 +1,101 @@
-# Archoleat Repo Template
+# Validate Font File Name
 
-![CodeQL](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/codeql.yaml?label=CodeQL)
-![Test](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/mocha.yaml?label=Test)
-![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/commitlint.yaml?label=Commitlint)
-![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/editorconfig.yaml?label=Editorconfig)
-![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/prettier.yaml?label=Prettier)
-![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/eslint.yaml?label=ESLint)
-![Markdown](https://img.shields.io/github/actions/workflow/status/archoleat/repo-template/markdown.yaml?label=Markdown)
+![NPM Version](https://img.shields.io/npm/v/%40archoleat%2Fvalidate-font-file-name)
+![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fvalidate-font-file-name)
+![CodeQL](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/codeql.yaml?label=CodeQL)
+![Test](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/test.yaml?label=Test)
+![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/commitlint.yaml?label=Commitlint)
+![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/editorconfig.yaml?label=Editorconfig)
+![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/prettier.yaml?label=Prettier)
+![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/eslint.yaml?label=ESLint)
+![Markdown](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/markdown.yaml?label=Markdown)
 ![ESM Only](https://img.shields.io/badge/ESM-only-gray?labelColor=fe0)
-
-> Stop Wasting Time on Repository Build-up!
 
 ## Table of Contents
 
--   [Getting Started](#getting-started)
--   [Features](#features)
--   [Scripts](#scripts)
--   [Workflows](#workflows)
--   [Prettier](#prettier)
--   [Commitlint, ESM and TypeScript](#commitlint-esm-and-typescript)
--   [Change of Maintainer](#change-of-maintainer)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Naming Convention](#naming-convention)
+-   [Troubleshooting](#troubleshooting)
 -   [Contributing](#contributing)
 -   [License](#license)
 
-**Archoleat Repo Template** is a template repository designed for quickly
-starting new projects with pre-configured tools and best development practices.
-This template includes ready-made solutions for integration with:
+## Installation
 
--   **Git**.
--   **GitHub**.
--   **Commitizen**.
--   **Commitlint**.
--   **Conventional Commits**.
--   **Husky & Lint Staged**.
--   **GitHub Actions**.
--   **Semantic Release**.
--   **PNPM**.
--   **CodeQL**.
--   **EditorConfig**.
--   **ESLint**.
--   **Remark**.
--   **Prettier**.
--   **Mocha**.
--   **TypeScript**.
--   **Dependabot**.
+```shell
+# pnpm
+pnpm i -D @archoleat/validate-font-file-name
+```
 
-> \[!TIP]
-> **A good solution for your business!**
->
-> Now you don't have to worry about unnecessary costs.
-> Everything is already set up and prepared for you!
->
-> And also the template is very good for teams,
-> because you can easily standardize projects with this template.
+```shell
+# npm
+npm i -D @archoleat/validate-font-file-name
+```
 
-## Getting Started
+```shell
+# yarn
+yarn add -D @archoleat/validate-font-file-name
+```
 
-1.  **Create a Repository**: Use this template
-    to create a new repository on GitHub.
+## Usage
 
-    > Since this is a **Public Template** you can click the button
-    > **Use this template** for a faster and more convenient cloning.
+```js
+import validateFontFileName from '@archoleat/validate-font-file-name';
 
-1.  **Clone the Repository**: Clone your new repository to your local machine.
+const validFontFileName = 'src/fonts/OpenSans-Regular.woff2';
+const invalidFontFileName = 'src/fonts/OpenSans.woff2';
 
-1.  **Start Development**: Develop your project,
-    making changes according to your project's needs.
+console.log(validateFontFileName(validFontFileName))
+// returns: true
 
-1.  **Configure GitHub Actions**: Modify GitHub Actions
-    settings to fit your requirements.
+console.log(validateFontFileName(invalidFontFileName))
+// returns: 'OpenSans.woff2' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.
+```
 
-    > **For those unfamiliar with GitHub Actions**,
-    > our workflows use
-    > [**chain**](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run),
-    > if you want to add more workflows to this chain,
-    > workflows, it won't work, because the chain only supports
-    > only three levels, example: `workflow A` > `workflow B` >
-    > `workflow C` > `workflow D`, if you add `workflow E`
-    > to the chain. it won't work!
+or
 
-## Features
+```js
+import validateFontFileName from '@archoleat/validate-font-file-name';
 
--   **Flexibility**: Easily customizable template to adapt
-    to different project types.
+const validFontFileName = 'OpenSans-Regular.woff2';
+const invalidFontFileName = 'OpenSans.woff2';
 
--   **Git and GitHub Integration**: Pre-configured `.gitignore`, `.gitmodules`
-    and `.gitattributes` for efficient work with Git and GitHub.
+console.log(validateFontFileName(validFontFileName))
+// returns: true
 
-    -   **Conventional Commits, Commitlint & Commitizen**: If you don't want
-        to think about how to write a commit every time,
-        these plugins will help you.
+console.log(validateFontFileName(invalidFontFileName))
+// returns: 'OpenSans.woff2' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.
+```
 
-        > It will be especially useful for teams that
-        > have an ongoing debate about writing commits.
+## Naming Convention
 
-    -   **Husky & Lint Staged**: Won't let you submit
-        bad code to the repository!
+The **font family** and **font weight** must be in **Pascal Case**
+and separated by a **hyphen**.
 
--   **Continuous Integration (CI)**: Built-in CI support using GitHub Actions
-    for automatic linting, testing and building of your code with each change.
+Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 
-    > Also suitable for private repositories! GitHub Actions use
-    > **cache**, **timeout-minutes**, **path filters** and **workflow run**
-    > to reduce the execution time, which means it will significantly
-    > reduce your costs!
+> `{FontFamily}-{FontWeight}.{ext}`
 
-    -   **Security**: Included **CodeQL** workflow for detecting
-        and preventing potential vulnerabilities in your code.
-
-    -   **Linters**: Help you maintain a consistent code writing style
-        and find errors.
-
-        > By default **ESLint**, **Prettier**, **Editorconfig Checker** and
-        > **Remark** check all files in the project, if you want to change this
-        > behavior then go to [`package.json`](package.json)
-        > and [`lint-staged.config.js`](lint-staged.config.js)
-        > files.
-
-    -   **Tests**: Automated testing will help you focus on
-        writing better code!
-
-    -   **Semantic Release**: For those who are tired of writing changelogs
-        and thinking about what the next version number will be.
-
--   **TypeScript**: Pre-configured **TypeScript** setup
-    for improved reliability and development convenience.
-
--   **Bots**:
-
-    -   **Dependabot**: No more wasting time updating dependencies!
-
-## Scripts
-
--   `init`: Installs dependencies, **Husky** and update submodules.
-
--   `release`: Runs **Semantic Release**.
-
--   `test`: Runs **Mocha** and the tests in the **specs/** folder.
-
-    > Also runs using the [`mocha.yaml`](.github/workflows/mocha.yaml)
-    > workflow.
-
--   `lint:editorconfig`: Runs **Editorconfig Checker** and
-    checks all files in the project.
-
-    > Also runs with the [`editorconfig.yaml`](.github/workflows/editorconfig.yaml)
-    > workflow.
-
--   `lint:formatting`: Runs **Prettier** with the `--check` flag
-    for all files.
-
-    > In the [`prettier.yaml`](.github/workflows/prettier.yaml)
-    >
-    > Also run with a `pre-commit` hook.
-
--   `lint:md`: Runs **Remark** with the `--quiet` flag and
-    checks all **Markdown** files.
-
-    > Also runs with the [`markdown.yaml`](.github/workflows/markdown.yaml)
-    > workflow.
-
--   `lint:ts`: Runs **ESLint** with the flag `--fix`
-    for all **TypeScript** files.
-
-    > Runs with the [`eslint.yaml`](.github/workflows/eslint.yaml)
-    > workflow.
-    >
-    > Also run with a `pre-commit` hook.
-
--   `prettify`: Runs **Prettier** with the `--write` flag
-    for all files.
-
--   `commit`: Runs **Commitlint** to create commits according to
-    **Conventional Commits** standards.
-
-## Workflows
-
--   [`codeql.yaml`](.github/workflows/codeql.yaml):
-    Checks **TypeScript** for vulnerabilities.
-
--   [`commitlint.yaml`](.github/workflows/commitlint.yaml):
-    Checks the commit message according to the **conventionalcommits** standard.
-
--   [`create-pull-request.yaml`](.github/workflows/create-pull-request.yaml):
-    Automatically creates a **Pull Request**
-    when pushing a branch to the repository.
-
--   [`dependabot-auto-merge-pull-request.yaml`](.github/workflows/dependabot-auto-merge-pull-request.yaml):
-    Automatically merges dependabot **Pull Requests** to the **main** branch.
-
--   [`editorconfig.yaml`](.github/workflows/editorconfig.yaml):
-    Checks all files with **editorconfig-checker**.
-
--   [`eslint.yaml`](.github/workflows/eslint.yaml):
-    Checks all **TypeScript** files with **ESLint**.
-
--   [`markdown.yaml`](.github/workflows/markdown.yaml):
-    Checks all Markdown files with **remark**.
-
--   [`mocha.yaml`](.github/workflows/mocha.yaml):
-    Tests all TypeScript files with **Mocha**.
-
--   [`pre-commit.yaml`](.github/workflows/pre-commit.yaml):
-    Runs a check on the contents of the **Pull Request** before merging.
-
--   [`prettier.yaml`](.github/workflows/prettier.yaml):
-    Checks all files with **Prettier**.
-
--   [`release.yaml`](.github/workflows/release.yaml): Creates release.
-
--   [`semantic-pull-request.yaml`](.github/workflows/semantic-pull-request-title.yaml):
-    Validates the **Pull Request** title
-    against the **conventional commits** standard.
-
--   [`stale.yaml`](.github/workflows/stale.yaml):
-    Removes issues that have not been active for more than 60 days.
-
-## Prettier
+## Troubleshooting
 
 > \[!WARNING]
-> You need to install the **Prettier** extension for it to work.
->
-> You can see all necessary extensions for **Visual Studio Code** in
-> [**.vscode**](https://github.com/archoleat/.vscode/extensions.json).
+> Developers Only.
 
-> \[!TIP]
-> If you want to change the rules in `prettier.config.js` you can do it
-> in `.editorconfig`, prettier will automatically pick up the rules
-> from editorconfig.
+If you are using **npm**, you may get a `peerDependency` error
+that is related to these plugins:
 
-> \[!NOTE]
-> All **Markdown** and **.\*ignore** files [**ignored**](.prettierignore).
+-   `typescript-eslint/eslint-plugin`.
+-   `typescript-eslint/parser`.
 
-## Commitlint, ESM and TypeScript
+To fix this you can switch to **pnpm**(recommended) or install version `6.0.0`:
 
-In order for `commitlint.config.ts` to work correctly together
-with the **CI/CD** pipeline, the following code has been added:
-
-```json
-// package.json
-"exports": {
-  "./*": "./commitlint.config.ts"
-},
+```shell
+typescript-eslint/eslint-plugin@6.0.0
 ```
 
-```json
-// tsconfig.json
-{
-  "module": "NodeNext",
-  "moduleResolution": "NodeNext"
-}
+```shell
+typescript-eslint/parser@6.0.0
 ```
-
-## Change of Maintainer
-
-The following files use the name **nikkeyl** by default:
-
--   [`CODEOWNERS`](.github/CODEOWNERS).
--   [`package.json`](package.json).
-
-Before using this template, replace this name with your
-name, name of your team or the name of your organization.
-
-> \[!CAUTION]
-> Don't forget to change your license!
 
 ## Contributing
 
