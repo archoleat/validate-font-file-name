@@ -21,23 +21,23 @@ const validateFontFileName = async (file: string) => {
   const FONT_WEIGHT_PATTERNS = [
     'Thin',
     'Hairline',
-    'Extralight',
-    'Ultralight',
+    'ExtraLight',
+    'UltraLight',
     'Light',
     'Regular',
     'Medium',
-    'Semibold',
-    'Demibold',
+    'SemiBold',
+    'DemiBold',
     'Bold',
-    'Extrabold',
-    'Ultrabold',
+    'ExtraBold',
+    'UltraBold',
     'Black',
     'Heavy',
-    'Extrablack',
-    'Ultrablack',
+    'ExtraBlack',
+    'UltraBlack',
   ].join('|');
   const FONT_EXTENSION_PATTERNS = ['otf', 'ttf', 'woff', 'woff2'].join('|');
-  const FAMILY_PATTERN = `(${FONT_FAMILY_PATTERN})+((${LETTERS_PATTERN})?)`;
+  const FAMILY_PATTERN = `(${FONT_FAMILY_PATTERN})`;
   const WEIGHT_PATTERN = `(${FONT_WEIGHT_PATTERNS})`;
   const EXTENSION_PATTERN = `(${FONT_EXTENSION_PATTERNS})$`;
   const FONT_FILE_NAME_PATTERN = new RegExp(
@@ -47,16 +47,14 @@ const validateFontFileName = async (file: string) => {
   const match = FONT_FILE_NAME_PATTERN.test(fileName);
 
   if (!match) {
-    console.warn(
-      chalk.yellow.bold(
-        `[VALIDATOR]: The font file name '${fileName}' doesn't match the 'FontFamily-Fontweight.{otf|ttf|woff|woff2}' template.`,
+    console.error(
+      chalk.red.bold(
+        `'${fileName}' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.`,
       ),
     );
 
     return false;
   }
-
-  console.info(chalk.green.bold("[VALIDATOR]: There's no naming errors!"));
 
   return true;
 };

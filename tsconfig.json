@@ -10,7 +10,6 @@
     "exactOptionalPropertyTypes": true,
     "lib": ["ESNext", "DOM"],
     "module": "NodeNext",
-    "noErrorTruncation": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -21,7 +20,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["chai", "mocha", "node"]
+    "types": ["vitest"]
   },
   "include": ["index.ts"]
 }
