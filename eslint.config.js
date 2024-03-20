@@ -38,6 +38,7 @@ export default defineFlatConfig([
     },
     rules: {
       'import/exports-last': 'error',
+      'import/extensions': ['error', { ts: 'always' }],
       'import/group-exports': 'error',
       'import/no-commonjs': 'error',
       'import/no-namespace': 'error',

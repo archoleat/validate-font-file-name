@@ -1,6 +1,6 @@
-import type { UserConfig } from '@commitlint/types';
+import { defineConfig } from '@archoleat/commitlint-define-config';
 
-const commitLintConfig: UserConfig = {
+export default defineConfig({
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
@@ -21,6 +21,4 @@ const commitLintConfig: UserConfig = {
       ],
     ],
   },
-};
-
-export default commitLintConfig;
+});
