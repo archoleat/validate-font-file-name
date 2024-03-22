@@ -52,10 +52,10 @@ const validFontFileName = 'src/fonts/OpenSans-Regular.woff2';
 const invalidFontFileName = 'src/fonts/OpenSans.woff2';
 
 // returns: true
-console.log(validateFontFileName(validFontFileName))
+console.log(await validateFontFileName(validFontFileName));
 
 // returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
-console.log(validateFontFileName(invalidFontFileName))
+console.log(await validateFontFileName(invalidFontFileName));
 ```
 
 or
@@ -67,10 +67,10 @@ const validFontFileName = 'OpenSans-Regular.woff2';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(validateFontFileName(validFontFileName))
+console.log(await validateFontFileName(validFontFileName));
 
 // returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
-console.log(validateFontFileName(invalidFontFileName))
+console.log(await validateFontFileName(invalidFontFileName));
 ```
 
 ### Your Regex
@@ -87,10 +87,10 @@ const validFontFileName = 'OpenSans-regular';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(validateFontFileName(validFontFileName))
+console.log(await validateFontFileName(validFontFileName));
 
 // returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(validateFontFileName(invalidFontFileName))
+console.log(await validateFontFileName(invalidFontFileName));
 ```
 
 ## Naming Convention
