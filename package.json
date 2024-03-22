@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/validate-font-file-name",
   "description": "Checking font file names for standardization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "email": "archoleat@gmail.com",

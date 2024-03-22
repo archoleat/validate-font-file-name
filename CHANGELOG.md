@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1](https://github.com/archoleat/validate-font-file-name/compare/v1.0.0...v1.0.1) (2024-03-22)
+
+
+### Code Refactoring
+
+* **commitlint:** add `defineConfig` ([#3](https://github.com/archoleat/validate-font-file-name/issues/3)) ([342cc0c](https://github.com/archoleat/validate-font-file-name/commit/342cc0c8ef1074d6a7e6b03a85f5f8e3f7ad00c0))
+* add optional argument `regex` ([#4](https://github.com/archoleat/validate-font-file-name/issues/4)) ([035e06e](https://github.com/archoleat/validate-font-file-name/commit/035e06e6e008832d338789efa7a8658c14c433ae))
+
+
+### Documentation
+
+* **changelog:** clean ([#2](https://github.com/archoleat/validate-font-file-name/issues/2)) ([e49cd9a](https://github.com/archoleat/validate-font-file-name/commit/e49cd9a48c809abb13f419f282734b3c07268ab7))
+
 ## 1.0.0 (2024-03-19)
 
 
