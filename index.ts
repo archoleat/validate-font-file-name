@@ -3,19 +3,24 @@ import { parse } from 'node:path';
 import chalk from 'chalk';
 
 /**
- * The function `validateFontFileName` checks if a given font
- * file name follows a specific naming convention.
+ * The function `validateFontFileName` in TypeScript validates
+ * if a given font file name matches a specific pattern.
  *
- * @param {string} file - The `validateFontFileName` function takes
- * a `file` parameter, which is expected to be a string representing
- * the file name of a font file.
+ * @param {string} file - The `file` parameter in the `validateFontFileName`
+ * function is a string that represents the file name of a font file that
+ * you want to validate.
  *
- * @returns The `validateFontFileName` function returns a boolean
- * value - `true` if the font file name matches the specified template
- * 'FontFamily-Fontweight.{otf|ttf|woff|woff2}', and `false` if it
- * doesn't match the template.
+ * @param {RegExp | string} [regex] - The `regex` parameter in the
+ * `validateFontFileName` function is used to provide a custom regular
+ * expression pattern for validating the font file name. If a custom
+ * regex pattern is not provided, the function uses a default pattern
+ * to validate the font file name.
+ *
+ * @returns The function `validateFontFileName` is returning a boolean value.
+ * It returns `true` if the file name matches the specified pattern,
+ * and `false` if it does not match.
  */
-const validateFontFileName = async (file: string) => {
+const validateFontFileName = async (file: string, regex: RegExp | string = '') => {
   const LETTERS_PATTERN = '[A-Z][a-z]';
   const FONT_FAMILY_PATTERN = `^${LETTERS_PATTERN}+(${LETTERS_PATTERN}+)?`;
   const FONT_WEIGHT_PATTERNS = [
@@ -44,13 +49,15 @@ const validateFontFileName = async (file: string) => {
     `${FAMILY_PATTERN}-${WEIGHT_PATTERN}\\.${EXTENSION_PATTERN}`,
   );
   const fileName = parse(file).base;
-  const match = FONT_FILE_NAME_PATTERN.test(fileName);
+  const selectPattern =
+    typeof regex === 'string' && regex !== ''
+      ? new RegExp(regex)
+      : regex || FONT_FILE_NAME_PATTERN;
+  const match = selectPattern.test(fileName);
 
   if (!match) {
     console.error(
-      chalk.red.bold(
-        `'${fileName}' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.`,
-      ),
+      chalk.red.bold(`'${fileName}' doesn't match with '${selectPattern}'.`),
     );
 
     return false;
