@@ -10,7 +10,7 @@ import chalk from 'chalk';
  * function is a string that represents the file name of a font file that
  * you want to validate.
  *
- * @param {RegExp | string} [regex] - The `regex` parameter in the
+ * @param {RegExp | string} regex - The `regex` parameter in the
  * `validateFontFileName` function is used to provide a custom regular
  * expression pattern for validating the font file name. If a custom
  * regex pattern is not provided, the function uses a default pattern
