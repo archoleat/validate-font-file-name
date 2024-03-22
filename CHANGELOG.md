@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/archoleat/validate-font-file-name/compare/v1.0.2...v1.0.3) (2024-03-22)
+
+
+### Code Refactoring
+
+* small changes ([#6](https://github.com/archoleat/validate-font-file-name/issues/6)) ([5828e18](https://github.com/archoleat/validate-font-file-name/commit/5828e18c4d0ae3ac2d082f72a29307feecc58a40))
+
 ## [1.0.2](https://github.com/archoleat/validate-font-file-name/compare/v1.0.1...v1.0.2) (2024-03-22)
 
 
