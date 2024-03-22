@@ -3,7 +3,7 @@ import { parse } from 'node:path';
 import chalk from 'chalk';
 
 /**
- * The function `validateFontFileName` in TypeScript validates
+ * The function `validateFontFileName` validates
  * if a given font file name matches a specific pattern.
  *
  * @param {string} file - The `file` parameter in the `validateFontFileName`

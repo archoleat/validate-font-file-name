@@ -9,7 +9,7 @@ describe('Validate Font File Name', () => {
     });
   });
 
-  test('regex: /OpenSans-Semibold\\.woff2/', async () => {
+  test('argument regex: /OpenSans-Semibold\\.woff2/', async () => {
     return validateFontFileName(
       'OpenSans-Semibold.woff2',
       /OpenSans-Semibold\.woff2/,
@@ -18,7 +18,7 @@ describe('Validate Font File Name', () => {
     });
   });
 
-  test("regex: new RegExp('OpenSans-Semibold.woff2')", async () => {
+  test("argument regex: new RegExp('OpenSans-Semibold.woff2')", async () => {
     return validateFontFileName(
       'OpenSans-Semibold.woff2',
       new RegExp('OpenSans-Semibold.woff2'),
@@ -27,7 +27,7 @@ describe('Validate Font File Name', () => {
     });
   });
 
-  test("regex: 'OpenSans-Semibold.woff2'", async () => {
+  test("argument regex: 'OpenSans-Semibold.woff2'", async () => {
     return validateFontFileName(
       'OpenSans-Semibold.woff2',
       'OpenSans-Semibold.woff2',
