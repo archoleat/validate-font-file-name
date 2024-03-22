@@ -14,10 +14,16 @@
 ## Table of Contents
 
 -   [Installation](#installation)
+
 -   [Usage](#usage)
+    -   [Your Regex](#your-regex)
+
 -   [Naming Convention](#naming-convention)
+
 -   [Troubleshooting](#troubleshooting)
+
 -   [Contributing](#contributing)
+
 -   [License](#license)
 
 ## Installation
@@ -45,11 +51,11 @@ import validateFontFileName from '@archoleat/validate-font-file-name';
 const validFontFileName = 'src/fonts/OpenSans-Regular.woff2';
 const invalidFontFileName = 'src/fonts/OpenSans.woff2';
 
-console.log(validateFontFileName(validFontFileName))
 // returns: true
+console.log(validateFontFileName(validFontFileName))
 
+// returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
 console.log(validateFontFileName(invalidFontFileName))
-// returns: 'OpenSans.woff2' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.
 ```
 
 or
@@ -60,11 +66,31 @@ import validateFontFileName from '@archoleat/validate-font-file-name';
 const validFontFileName = 'OpenSans-Regular.woff2';
 const invalidFontFileName = 'OpenSans.woff2';
 
-console.log(validateFontFileName(validFontFileName))
 // returns: true
+console.log(validateFontFileName(validFontFileName))
 
+// returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
 console.log(validateFontFileName(invalidFontFileName))
-// returns: 'OpenSans.woff2' doesn't match the '{FontFamily}-{FontWeight}.{ext}'.
+```
+
+### Your Regex
+
+You can also specify your pattern:
+
+```js
+import validateFontFileName from '@archoleat/validate-font-file-name';
+
+// You can also specify `new RegExp()` and a regular `string`
+const yourPattern = /OpenSans-regular/;
+
+const validFontFileName = 'OpenSans-regular';
+const invalidFontFileName = 'OpenSans.woff2';
+
+// returns: true
+console.log(validateFontFileName(validFontFileName))
+
+// returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
+console.log(validateFontFileName(invalidFontFileName))
 ```
 
 ## Naming Convention
