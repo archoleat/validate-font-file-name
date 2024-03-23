@@ -20,8 +20,6 @@
 
 -   [Naming Convention](#naming-convention)
 
--   [Troubleshooting](#troubleshooting)
-
 -   [Contributing](#contributing)
 
 -   [License](#license)
@@ -87,10 +85,10 @@ const validFontFileName = 'OpenSans-regular';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(await validateFontFileName(validFontFileName));
+console.log(await validateFontFileName(validFontFileName, yourPattern));
 
 // returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(await validateFontFileName(invalidFontFileName));
+console.log(await validateFontFileName(invalidFontFileName, yourPattern));
 ```
 
 ## Naming Convention
@@ -101,27 +99,6 @@ and separated by a **hyphen**.
 Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 
 > `{FontFamily}-{FontWeight}.{ext}`
-
-## Troubleshooting
-
-> \[!WARNING]
-> Developers Only.
-
-If you are using **npm**, you may get a `peerDependency` error
-that is related to these plugins:
-
--   `typescript-eslint/eslint-plugin`.
--   `typescript-eslint/parser`.
-
-To fix this you can switch to **pnpm**(recommended) or install version `6.0.0`:
-
-```shell
-typescript-eslint/eslint-plugin@6.0.0
-```
-
-```shell
-typescript-eslint/parser@6.0.0
-```
 
 ## Contributing
 
