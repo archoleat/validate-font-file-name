@@ -44,7 +44,7 @@ yarn add -D @archoleat/validate-font-file-name
 ## Usage
 
 ```js
-import validateFontFileName from '@archoleat/validate-font-file-name';
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
 const validFontFileName = 'src/fonts/OpenSans-Regular.woff2';
 const invalidFontFileName = 'src/fonts/OpenSans.woff2';
@@ -59,7 +59,7 @@ console.log(await validateFontFileName(invalidFontFileName));
 or
 
 ```js
-import validateFontFileName from '@archoleat/validate-font-file-name';
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
 const validFontFileName = 'OpenSans-Regular.woff2';
 const invalidFontFileName = 'OpenSans.woff2';
@@ -76,7 +76,7 @@ console.log(await validateFontFileName(invalidFontFileName));
 You can also specify your pattern:
 
 ```js
-import validateFontFileName from '@archoleat/validate-font-file-name';
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
 // You can also specify `new RegExp()` and a regular `string`
 const yourPattern = /OpenSans-regular/;

@@ -66,4 +66,4 @@ const validateFontFileName = async (file: string, regex: RegExp | string = '') =
   return true;
 };
 
-export default validateFontFileName;
+export { validateFontFileName };
