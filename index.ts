@@ -20,7 +20,7 @@ import chalk from 'chalk';
  * It returns `true` if the file name matches the specified pattern,
  * and `false` if it does not match.
  */
-const validateFontFileName = async (file: string, regex: RegExp | string = '') => {
+const validateFontFileName = async (file: string, regex: string | RegExp  = '') => {
   const LETTERS_PATTERN = '[A-Z][a-z]';
   const FONT_FAMILY_PATTERN = `^${LETTERS_PATTERN}+(${LETTERS_PATTERN}+)?`;
   const FONT_WEIGHT_PATTERNS = [
