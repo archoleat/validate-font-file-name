@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import validateFontFileName from '../index.ts';
+import { validateFontFileName } from '../index.ts';
 
 describe('Validate Font File Name', () => {
   test('OpenSans-SemiBold.woff2', async () => {
