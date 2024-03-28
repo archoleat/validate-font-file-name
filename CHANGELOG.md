@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.0.5](https://github.com/archoleat/validate-font-file-name/compare/v1.0.4...v1.0.5) (2024-03-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* add correct `export` (#17)
+* replace `default export` with `naming export` (#16)
+
+### Bug Fixes
+
+* add correct `export` ([#17](https://github.com/archoleat/validate-font-file-name/issues/17)) ([4ad28d4](https://github.com/archoleat/validate-font-file-name/commit/4ad28d4b02740e9a4d072d2a5a78e61a0f8bdd14))
+
+
+### Code Refactoring
+
+* replace `default export` with `naming export` ([#16](https://github.com/archoleat/validate-font-file-name/issues/16)) ([c7c049c](https://github.com/archoleat/validate-font-file-name/commit/c7c049c3655fea396c5da6eeff35027fd3687f7c))
+
+
+### Documentation
+
+* **readme:** remove `troubleshooting` ([#9](https://github.com/archoleat/validate-font-file-name/issues/9)) ([80127e5](https://github.com/archoleat/validate-font-file-name/commit/80127e5ae26b097dc05f6725a604b82374f35223))
+* **readme:** rewrite `js` code ([#8](https://github.com/archoleat/validate-font-file-name/issues/8)) ([c2b05bf](https://github.com/archoleat/validate-font-file-name/commit/c2b05bf79b9596b31ad8d12d687b04e17df9deee))
+
 ## [1.0.4](https://github.com/archoleat/validate-font-file-name/compare/v1.0.3...v1.0.4) (2024-03-22)
 
 
