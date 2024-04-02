@@ -14,14 +14,9 @@
 ## Table of Contents
 
 -   [Installation](#installation)
-
 -   [Usage](#usage)
-    -   [Your Regex](#your-regex)
-
 -   [Naming Convention](#naming-convention)
-
 -   [Contributing](#contributing)
-
 -   [License](#license)
 
 ## Installation
