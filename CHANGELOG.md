@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/archoleat/validate-font-file-name/compare/v1.0.6...v1.0.7) (2024-04-04)
+
+
+### Code Refactoring
+
+* **index:** rename `const`s ([#27](https://github.com/archoleat/validate-font-file-name/issues/27)) ([e0f4abc](https://github.com/archoleat/validate-font-file-name/commit/e0f4abc75714db1711e2b63164b1331855f263a7))
+
 ## [1.0.6](https://github.com/archoleat/validate-font-file-name/compare/v1.0.5...v1.0.6) (2024-04-04)
 
 
