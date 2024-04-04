@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.6](https://github.com/archoleat/validate-font-file-name/compare/v1.0.5...v1.0.6) (2024-04-04)
+
+
+### Code Refactoring
+
+* **eslint:** add `compatibility` function ([#20](https://github.com/archoleat/validate-font-file-name/issues/20)) ([24e00b4](https://github.com/archoleat/validate-font-file-name/commit/24e00b4ef77eca2036e54c5db48dc523e73439be))
+* **eslint:** add `extend` ([#25](https://github.com/archoleat/validate-font-file-name/issues/25)) ([05b14e1](https://github.com/archoleat/validate-font-file-name/commit/05b14e11607cd3baa8480c9c9b44d4cb205e1903))
+* **husky:** remove submodule ([#22](https://github.com/archoleat/validate-font-file-name/issues/22)) ([23b9892](https://github.com/archoleat/validate-font-file-name/commit/23b9892b3ed6b292b934f1e221eab24fc9cba72b))
+
+
+### Documentation
+
+* **readme:** remove `h3` titles in ToC ([#21](https://github.com/archoleat/validate-font-file-name/issues/21)) ([f49517b](https://github.com/archoleat/validate-font-file-name/commit/f49517be374c908e0be1075f45d98812dfa6a299))
+
 ## [1.0.5](https://github.com/archoleat/validate-font-file-name/compare/v1.0.4...v1.0.5) (2024-03-28)
 
 
