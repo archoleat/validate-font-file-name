@@ -55,7 +55,7 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:formatting": "prettier . --check",
     "lint:md": "remark . --quiet",
-    "lint:ts": "eslint index.ts --fix",
+    "lint:ts": "eslint src/index.ts --fix",
     "prettify": "prettier . --write",
     "commit": "cz"
   },
@@ -79,6 +79,7 @@
     "editorconfig-checker": "^5.1.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
