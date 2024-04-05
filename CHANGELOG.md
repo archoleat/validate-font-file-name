@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/archoleat/validate-font-file-name/compare/v1.0.8...v1.0.9) (2024-04-05)
+
+
+### Code Refactoring
+
+* move `index.ts` to `src` folder ([#30](https://github.com/archoleat/validate-font-file-name/issues/30)) ([65273ad](https://github.com/archoleat/validate-font-file-name/commit/65273adce546d1487dfadaf26831d4ac223a77f3))
+
 ## [1.0.8](https://github.com/archoleat/validate-font-file-name/compare/v1.0.7...v1.0.8) (2024-04-05)
 
 
