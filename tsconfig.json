@@ -22,5 +22,5 @@
     "target": "ESNext",
     "types": ["vitest"]
   },
-  "include": ["index.ts"]
+  "include": ["src/index.ts"]
 }
