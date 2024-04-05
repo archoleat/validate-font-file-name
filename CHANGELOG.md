@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/archoleat/validate-font-file-name/compare/v1.0.7...v1.0.8) (2024-04-05)
+
+
+### Code Refactoring
+
+* **eslint:** add `ecmaVersion` and `sourceType` ([#28](https://github.com/archoleat/validate-font-file-name/issues/28)) ([9d2ab45](https://github.com/archoleat/validate-font-file-name/commit/9d2ab4509d24012bfafadfe1b0b092f3f398c1ef))
+
 ## [1.0.7](https://github.com/archoleat/validate-font-file-name/compare/v1.0.6...v1.0.7) (2024-04-04)
 
 
