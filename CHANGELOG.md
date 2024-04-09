@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/archoleat/validate-font-file-name/compare/v1.0.9...v1.0.10) (2024-04-09)
+
+
+### Code Refactoring
+
+* **eslint:** rename unicorn import ([#37](https://github.com/archoleat/validate-font-file-name/issues/37)) ([94f315e](https://github.com/archoleat/validate-font-file-name/commit/94f315e4607cfe7d7bcabefa025c287cb754f769))
+
 ## [1.0.9](https://github.com/archoleat/validate-font-file-name/compare/v1.0.8...v1.0.9) (2024-04-05)
 
 
