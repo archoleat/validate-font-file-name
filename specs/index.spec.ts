@@ -50,6 +50,12 @@ describe('Validate Font File Name', () => {
     );
   });
 
+  spec('Open-Sans-SemiBold.woff2', async () => {
+    return validateFontFileName('Open-Sans-SemiBold.woff2').then((argument) => {
+      expect(argument).equal(false);
+    });
+  });
+
   spec('src/fonts/OpenSans.woff2', async () => {
     return validateFontFileName('src/fonts/OpenSans.woff2').then((argument) => {
       expect(argument).equal(false);

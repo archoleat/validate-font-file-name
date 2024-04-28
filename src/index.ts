@@ -49,7 +49,7 @@ const validateFontFileName = async (file: string, pattern: string | RegExp = '')
     `${FAMILY_PATTERN}-${WEIGHT_PATTERNS}\\.${EXTENSION_PATTERNS}`,
   );
   const fileName = parse(file).base;
-  const typeOfPattern = typeof pattern === 'string' && pattern !== '';
+  const typeOfPattern = typeof(pattern) === 'string' && pattern !== '';
   const selectPattern = typeOfPattern
     ? new RegExp(pattern)
     : pattern || DEFAULT_FONT_FILE_NAME_PATTERN;
