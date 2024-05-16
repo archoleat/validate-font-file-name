@@ -27,15 +27,14 @@
     "validate",
     "validator"
   ],
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.1.1",
   "engines": {
     "node": ">=20.0.0",
-    "npm": ">=10.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=9.0.0"
   },
   "volta": {
     "node": "20.12.0",
-    "pnpm": "8.15.6"
+    "pnpm": "9.1.1"
   },
   "type": "module",
   "types": "index.d.ts",
@@ -71,10 +70,10 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20.12.7",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
-    "@vitest/coverage-v8": "^1.5.2",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "editorconfig-checker": "^5.1.5",
@@ -85,20 +84,20 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.1.0",
+    "globals": "^15.2.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "remark": "15.0.1",
-    "remark-cli": "^12.0.0",
+    "remark-cli": "^12.0.1",
     "remark-preset-lint-consistent": "^5.1.2",
     "remark-preset-lint-markdown-style-guide": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",
-    "rollup": "^4.17.0",
+    "rollup": "^4.17.2",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.1",
-    "semantic-release": "^23.0.8",
+    "semantic-release": "^23.1.1",
     "typescript": "^5.4.5",
-    "vitest": "^1.5.2"
+    "vitest": "^1.6.0"
   }
 }
