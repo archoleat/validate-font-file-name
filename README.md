@@ -13,11 +13,11 @@
 
 ## Table of Contents
 
--   [Installation](#installation)
--   [Usage](#usage)
--   [Naming Convention](#naming-convention)
--   [Contributing](#contributing)
--   [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Naming Convention](#naming-convention)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 

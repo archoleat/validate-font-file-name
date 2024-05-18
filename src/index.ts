@@ -2,6 +2,8 @@ import { parse } from 'node:path';
 
 import chalk from 'chalk';
 
+import type { PatternExample } from './types/pattern-example.ts';
+
 /**
  * The asynchronous function `validateFontFileName` validates
  * if a given font file name matches a specific pattern.
@@ -20,7 +22,16 @@ import chalk from 'chalk';
  * It returns `true` if the file name matches the specified pattern,
  * and `false` if it does not match.
  */
-const validateFontFileName = async (file: string, pattern: string | RegExp = '') => {
+const validateFontFileName = async (
+  file: string,
+  pattern: string | RegExp = '',
+  example: PatternExample = {},
+) => {
+  const {
+    fontFamily = 'FontFamily',
+    fontWeight = 'FontWeight',
+    extension = 'otf|ttf|woff|woff2',
+  } = example;
   const LETTERS_PATTERN = '[A-Z][a-z]';
   const FONT_FAMILY_PATTERN = `^${LETTERS_PATTERN}+(${LETTERS_PATTERN}+)?`;
   const FONT_WEIGHT_PATTERNS = [
@@ -54,10 +65,11 @@ const validateFontFileName = async (file: string, pattern: string | RegExp = '')
     ? new RegExp(pattern)
     : pattern || DEFAULT_FONT_FILE_NAME_PATTERN;
   const match = selectPattern.test(fileName);
+  const patternExample = `${fontFamily}-${fontWeight}.${extension}`;
 
   if (!match) {
     console.error(
-      chalk.red.bold(`'${fileName}' doesn't match with '${selectPattern}'.`),
+      chalk.red.bold(`'${fileName}' doesn't match with '${patternExample}'.`),
     );
 
     return false;

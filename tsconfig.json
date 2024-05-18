@@ -20,7 +20,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["vitest"]
+    "types": ["node", "vitest"]
   },
-  "include": ["src/index.ts"]
+  "include": ["src"]
 }
