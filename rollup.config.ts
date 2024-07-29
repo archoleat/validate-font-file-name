@@ -23,7 +23,7 @@ export default defineConfig([
         entries: [
           {
             find: '#types',
-            replacement: './types',
+            replacement: 'src/types',
           },
         ],
       }),

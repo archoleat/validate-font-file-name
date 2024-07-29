@@ -39,8 +39,8 @@
   "type": "module",
   "types": "index.d.ts",
   "imports": {
-    "#types/*": "./src/types/*",
-    "#src/*": "./src/*"
+    "#src/*": "./src/*",
+    "#types/*": "./src/types/*"
   },
   "exports": {
     ".": "./index.js"
