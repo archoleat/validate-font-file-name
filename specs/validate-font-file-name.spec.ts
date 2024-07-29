@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test as spec } from 'vitest';
 
-import { validateFontFileName } from '#src/index.ts';
+import { validateFontFileName } from '#index';
 
 describe('Validate Font File Name', () => {
   let validate: Function;

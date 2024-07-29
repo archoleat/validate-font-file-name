@@ -7,6 +7,7 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const indexFile = 'src/index.ts';
+const types = 'src/types'
 
 export default defineConfig([
   {
@@ -22,8 +23,12 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#types',
-            replacement: 'src/types',
+            find: '#pattern',
+            replacement: `${types}/pattern-example.d.ts`,
+          },
+          {
+            find: '#props',
+            replacement: `${types}/props.d.ts`,
           },
         ],
       }),

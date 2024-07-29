@@ -2,7 +2,7 @@ import { parse } from 'node:path';
 
 import chalk from 'chalk';
 
-import type { Props } from '#types/props.d.ts';
+import type { Props } from '#props';
 
 /**
  * The asynchronous function `validateFontFileName` validates

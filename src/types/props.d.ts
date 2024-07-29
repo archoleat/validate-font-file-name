@@ -1,4 +1,4 @@
-import type { PatternExample } from './pattern-example.d.ts';
+import type { PatternExample } from '#pattern';
 
 type Props = {
   file: string;
