@@ -2,7 +2,7 @@ import { parse } from 'node:path';
 
 import chalk from 'chalk';
 
-import type { PatternExample } from './types/pattern-example.ts';
+import type { Props } from '#types/props.d.ts';
 
 /**
  * The asynchronous function `validateFontFileName` validates
@@ -22,11 +22,9 @@ import type { PatternExample } from './types/pattern-example.ts';
  * It returns `true` if the file name matches the specified pattern,
  * and `false` if it does not match.
  */
-const validateFontFileName = async (
-  file: string,
-  pattern: string | RegExp = '',
-  example: PatternExample = {},
-) => {
+
+const validateFontFileName = async (props: Props) => {
+  const { file, pattern = '', example = {} } = props;
   const {
     fontFamily = 'FontFamily',
     fontWeight = 'FontWeight',

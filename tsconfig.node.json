@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "composite": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "lib": ["DOM", "ESNext"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "",
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "types": ["node", "vitest"]
+  }
+}
