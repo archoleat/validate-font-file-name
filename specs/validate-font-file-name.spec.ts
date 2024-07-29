@@ -6,12 +6,14 @@ describe('Validate Font File Name', () => {
   let validate: Function;
 
   beforeEach(() => {
-    const addValidate = (file: string, equal: boolean, pattern?: string | RegExp) => {
-      return validateFontFileName({ file, pattern }).then(
-        (argument) => {
-          expect(argument).equal(equal);
-        },
-      );
+    const addValidate = (
+      file: string,
+      equal: boolean,
+      pattern?: string | RegExp,
+    ) => {
+      return validateFontFileName({ file, pattern }).then((argument) => {
+        expect(argument).equal(equal);
+      });
     };
 
     validate = addValidate;
@@ -29,7 +31,7 @@ describe('Validate Font File Name', () => {
     return validate(
       'OpenSans-SemiBold.woff2',
       true,
-      new RegExp('OpenSans-SemiBold.woff2')
+      new RegExp('OpenSans-SemiBold.woff2'),
     );
   });
 
