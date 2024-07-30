@@ -25,7 +25,7 @@ export default defineConfig([
         entries: [
           {
             find: '#types',
-            replacement: `${types}/index.ts`,
+            replacement: `${types}/${fileName}.d.ts`,
           },
         ],
       }),
