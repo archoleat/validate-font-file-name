@@ -2,7 +2,7 @@ import { parse } from 'node:path';
 
 import chalk from 'chalk';
 
-import type { Parameters } from '#parameters';
+import { Parameters } from '#types';
 
 /**
  * The asynchronous function `validateFontFileName` validates

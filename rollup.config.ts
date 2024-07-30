@@ -24,12 +24,8 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#parameters',
-            replacement: `${types}/parameters.d.ts`,
-          },
-          {
-            find: '#pattern',
-            replacement: `${types}/pattern-example.d.ts`,
+            find: '#types',
+            replacement: `${types}/index.ts`,
           },
         ],
       }),

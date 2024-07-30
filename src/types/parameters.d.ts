@@ -1,4 +1,4 @@
-import type { PatternExample } from '#pattern';
+import type { PatternExample } from './pattern-example.d.ts';
 
 type Parameters = {
   file: string;
