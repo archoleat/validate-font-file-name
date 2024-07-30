@@ -68,22 +68,22 @@ console.log(await validateFontFileName(invalidFontFileName));
 
 ### Your Regex
 
-You can also specify your pattern:
+You can also specify your regex:
 
 ```js
 import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
 // You can also specify `new RegExp()` and a regular `string`
-const yourPattern = /OpenSans-regular/;
+const yourRegex = /OpenSans-regular/;
 
 const validFontFileName = 'OpenSans-regular';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(await validateFontFileName(validFontFileName, yourPattern));
+console.log(await validateFontFileName(validFontFileName, yourRegex));
 
 // returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(await validateFontFileName(invalidFontFileName, yourPattern));
+console.log(await validateFontFileName(invalidFontFileName, yourRegex));
 ```
 
 ## Naming Convention
@@ -93,7 +93,7 @@ and separated by a **hyphen**.
 
 Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 
-> `{FontFamily}-{FontWeight}.{ext}`
+> `{FontFamily}-{FontWeight}.{extension}`
 
 ## Contributing
 

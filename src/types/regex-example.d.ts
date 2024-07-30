@@ -1,7 +1,7 @@
-type PatternExample = {
+type RegexExample = {
   fontFamily?: string;
   fontWeight?: string;
   extension?: string;
-}
+};
 
-export { PatternExample };
+export { RegexExample };

@@ -9,9 +9,9 @@ describe('Validate Font File Name', () => {
     const addValidate = async (
       file: string,
       equal: boolean,
-      pattern?: string | RegExp,
+      regex?: string | RegExp,
     ) => {
-      return validateFontFileName({ file, pattern }).then((parameter) => {
+      return validateFontFileName({ file, regex }).then((parameter) => {
         expect(parameter).equal(equal);
       });
     };
@@ -23,11 +23,11 @@ describe('Validate Font File Name', () => {
     return validate('OpenSans-SemiBold.woff2', true);
   });
 
-  spec('pattern: /OpenSans-SemiBold\\.woff2/', async () => {
+  spec('regex: /OpenSans-SemiBold\\.woff2/', async () => {
     return validate('OpenSans-SemiBold.woff2', true, /OpenSans-SemiBold\.woff2/);
   });
 
-  spec("pattern: new RegExp('OpenSans-SemiBold.woff2')", async () => {
+  spec("regex: new RegExp('OpenSans-SemiBold.woff2')", async () => {
     return validate(
       'OpenSans-SemiBold.woff2',
       true,
@@ -35,7 +35,7 @@ describe('Validate Font File Name', () => {
     );
   });
 
-  spec("pattern: 'OpenSans-SemiBold.woff2'", async () => {
+  spec("regex: 'OpenSans-SemiBold.woff2'", async () => {
     return validate('OpenSans-SemiBold.woff2', true, 'OpenSans-SemiBold.woff2');
   });
 

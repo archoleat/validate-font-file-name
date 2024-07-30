@@ -1,9 +1,9 @@
-import type { PatternExample } from './pattern-example.d.ts';
+import type { RegexExample } from './regex-example.d.ts';
 
 type Parameters = {
   file: string;
-  pattern?: string | RegExp;
-  example?: PatternExample;
+  regex?: string | RegExp;
+  example?: RegexExample;
 };
 
 export { Parameters };

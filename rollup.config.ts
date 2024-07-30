@@ -7,7 +7,7 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const fileName = 'index';
-const indexFile = 'src/index.ts';
+const indexFile = `src/${fileName}.ts`;
 const types = 'src/types';
 
 export default defineConfig([
