@@ -42,6 +42,17 @@ export default defineFlatConfig([
       'import/no-namespace': 'error',
       'import/no-unassigned-import': 'error',
       'import/prefer-default-export': 'off',
+      'unicorn/import-style': [
+        'error',
+        {
+          styles: {
+            'node:path': {
+              default: false,
+              named: true,
+            },
+          },
+        },
+      ],
       'unicorn/no-unused-properties': 'error',
       'unicorn/string-content': 'error',
     },

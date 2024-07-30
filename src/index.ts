@@ -2,7 +2,7 @@ import { parse } from 'node:path';
 
 import chalk from 'chalk';
 
-import type { Props } from '#props';
+import type { Parameters } from '#parameters';
 
 /**
  * The asynchronous function `validateFontFileName` validates
@@ -23,8 +23,8 @@ import type { Props } from '#props';
  * and `false` if it does not match.
  */
 
-const validateFontFileName = async (props: Props) => {
-  const { file, pattern = '', example = {} } = props;
+const validateFontFileName = async (parameters: Parameters) => {
+  const { file, pattern = '', example = {} } = parameters;
   const {
     fontFamily = 'FontFamily',
     fontWeight = 'FontWeight',

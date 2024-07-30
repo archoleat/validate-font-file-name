@@ -41,7 +41,7 @@
   "imports": {
     "#index": "./src/index.ts",
     "#pattern": "./src/types/pattern-example.d.ts",
-    "#props": "./src/types/props.d.ts"
+    "#parameters": "./src/types/parameters.d.ts"
   },
   "exports": {
     ".": "./index.js"
@@ -84,7 +84,7 @@
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "editorconfig-checker": "^5.1.8",
-    "eslint": "^9.8.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",

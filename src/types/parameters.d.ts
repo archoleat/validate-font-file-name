@@ -1,9 +1,9 @@
 import type { PatternExample } from '#pattern';
 
-type Props = {
+type Parameters = {
   file: string;
   pattern?: string | RegExp;
   example?: PatternExample;
 };
 
-export { Props };
+export { Parameters };

@@ -6,13 +6,13 @@ describe('Validate Font File Name', () => {
   let validate: Function;
 
   beforeEach(() => {
-    const addValidate = (
+    const addValidate = async (
       file: string,
       equal: boolean,
       pattern?: string | RegExp,
     ) => {
-      return validateFontFileName({ file, pattern }).then((argument) => {
-        expect(argument).equal(equal);
+      return validateFontFileName({ file, pattern }).then((parameter) => {
+        expect(parameter).equal(equal);
       });
     };
 
