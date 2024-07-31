@@ -1,6 +1,7 @@
 import { parse } from 'node:path';
 
-import chalk from 'chalk';
+import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
+import { error } from '@archoleat/notifier';
 
 import type { Parameters } from '#types';
 
@@ -24,51 +25,17 @@ import type { Parameters } from '#types';
  */
 
 const validateFontFileName = async (parameters: Parameters) => {
-  const { file, regex = '', example = {} } = parameters;
-  const {
-    fontFamily = 'FontFamily',
-    fontWeight = 'FontWeight',
-    extension = 'otf|ttf|woff|woff2',
-  } = example;
-  const LETTERS_REGEX = '[A-Z][a-z]';
-  const FONT_FAMILY_REGEX = `^${LETTERS_REGEX}+(${LETTERS_REGEX}+)?`;
-  const FONT_WEIGHT_REGEX = [
-    'Thin',
-    'Hairline',
-    'ExtraLight',
-    'UltraLight',
-    'Light',
-    'Regular',
-    'Medium',
-    'SemiBold',
-    'DemiBold',
-    'Bold',
-    'ExtraBold',
-    'UltraBold',
-    'Black',
-    'Heavy',
-    'ExtraBlack',
-    'UltraBlack',
-  ].join('|');
-  const FONT_EXTENSION_REGEX = ['otf', 'ttf', 'woff', 'woff2'].join('|');
-  const FAMILY_REGEX = `(${FONT_FAMILY_REGEX})`;
-  const WEIGHT_REGEX = `(${FONT_WEIGHT_REGEX})`;
-  const EXTENSION_REGEX = `(${FONT_EXTENSION_REGEX})$`;
-  const DEFAULT_FONT_FILE_NAME_REGEX = new RegExp(
-    `${FAMILY_REGEX}-${WEIGHT_REGEX}\\.${EXTENSION_REGEX}`,
-  );
+  const { file, regex = '' } = parameters;
+
   const fileName = parse(file).base;
   const typeOfRegex = typeof regex === 'string' && regex !== '';
   const selectRegex = typeOfRegex
     ? new RegExp(regex)
-    : regex || DEFAULT_FONT_FILE_NAME_REGEX;
+    : regex || FONT_FILE_NAME_REGEX;
   const match = selectRegex.test(fileName);
-  const regexExample = `${fontFamily}-${fontWeight}.${extension}`;
 
   if (!match) {
-    console.error(
-      chalk.red.bold(`'${fileName}' doesn't match with '${regexExample}'.`),
-    );
+    error(`'${fileName}' doesn't match with '${selectRegex}'.`);
 
     return false;
   }

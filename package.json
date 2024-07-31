@@ -63,7 +63,7 @@
     "commit": "cz"
   },
   "dependencies": {
-    "chalk": "^5.3.0"
+    "@archoleat/reglib": "^1.0.2"
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.0.7",
@@ -79,7 +79,7 @@
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@vitest/coverage-v8": "^2.0.4",
+    "@vitest/coverage-v8": "^2.0.5",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "editorconfig-checker": "^5.1.8",
@@ -105,6 +105,6 @@
     "rollup-plugin-esbuild": "^6.1.1",
     "semantic-release": "^24.0.0",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.4"
+    "vitest": "^2.0.5"
   }
 }
