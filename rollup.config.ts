@@ -13,6 +13,7 @@ const indexFile = `${sourceFolder}/${fileName}.ts`;
 
 export default defineConfig([
   {
+    external: ['@archoleat/notifier', '@archoleat/reglib', 'node:path'],
     plugins: [typescript(), minify()],
     input: indexFile,
     output: {

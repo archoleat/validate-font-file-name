@@ -17,10 +17,12 @@
     "url": "https://github.com/archoleat/validate-font-file-name/issues"
   },
   "keywords": [
+    "archoleat-font-file-name",
     "archoleat",
     "font-file-name-standard",
     "font-file-name",
     "naming",
+    "plugin",
     "standard",
     "validate-font-file-name",
     "validate-name",
