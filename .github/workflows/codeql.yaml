@@ -7,12 +7,14 @@ on:
     paths:
       - package.json
       - src/index.ts
+      - src/types/*.d.ts
   push:
     branches:
       - main
     paths:
       - package.json
       - src/index.ts
+      - src/types/*.d.ts
 
 permissions:
   actions: read
