@@ -28,14 +28,12 @@ const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '' } = parameters;
 
   const fileName = parse(file).base;
-  const typeOfRegex = typeof regex === 'string' && regex !== '';
-  const selectRegex = typeOfRegex
-    ? new RegExp(regex)
-    : regex || FONT_FILE_NAME_REGEX;
+  const regexType = typeof regex === 'string' && regex !== '';
+  const selectRegex = regexType ? new RegExp(regex) : regex || FONT_FILE_NAME_REGEX;
   const match = selectRegex.test(fileName);
 
   if (!match) {
-    error(`'${fileName}' doesn't match with '${selectRegex}'.`);
+    error({ message: `'${fileName}' doesn't match with '${selectRegex}'.` });
 
     return false;
   }

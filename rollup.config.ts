@@ -10,11 +10,11 @@ const sourceFolder = 'src';
 const types = `${sourceFolder}/types`;
 
 const fileName = 'index';
+const fileFormat = 'es';
+
 const indexFile = `${fileName}.ts`;
 const declarationFile = `${fileName}.d.ts`;
 const outputFile = `${fileName}.js`;
-
-const fileFormat = 'es';
 
 export default defineConfig([
   {
