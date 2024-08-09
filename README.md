@@ -23,6 +23,11 @@
 ## Installation
 
 ```shell
+# bun
+bun i -D @archoleat/commitlint-define-config
+```
+
+```shell
 # pnpm
 pnpm i -D @archoleat/validate-font-file-name
 ```
