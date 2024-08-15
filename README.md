@@ -2,24 +2,30 @@
 
 ![NPM Version](https://img.shields.io/npm/v/%40archoleat%2Fvalidate-font-file-name)
 ![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fvalidate-font-file-name)
+![ESM](https://img.shields.io/badge/ESM-fe0)
+![Provenance](https://img.shields.io/badge/Provenance-fo0)
 ![CodeQL](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/codeql.yaml?label=CodeQL)
 ![Specs](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/spec.yaml?label=Specs)
 ![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/commitlint.yaml?label=Commitlint)
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/editorconfig.yaml?label=Editorconfig)
 ![Prettier](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/prettier.yaml?label=Prettier)
 ![ESLint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/eslint.yaml?label=ESLint)
-![Markdown](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/markdown.yaml?label=Markdown)
-![ESM Only](https://img.shields.io/badge/ESM-only-gray?labelColor=fe0)
+![Remark](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/remark.yaml?label=Remark)
 
 ## Table of Contents
 
--   [Installation](#installation)
--   [Usage](#usage)
--   [Naming Convention](#naming-convention)
--   [Contributing](#contributing)
--   [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Naming Convention](#naming-convention)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
+
+```shell
+# bun
+bun i -D @archoleat/validate-font-file-name
+```
 
 ```shell
 # pnpm
@@ -68,22 +74,22 @@ console.log(await validateFontFileName(invalidFontFileName));
 
 ### Your Regex
 
-You can also specify your pattern:
+You can also specify your regex:
 
 ```js
 import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
 // You can also specify `new RegExp()` and a regular `string`
-const yourPattern = /OpenSans-regular/;
+const yourRegex = /OpenSans-regular/;
 
 const validFontFileName = 'OpenSans-regular';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(await validateFontFileName(validFontFileName, yourPattern));
+console.log(await validateFontFileName(validFontFileName, yourRegex));
 
 // returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(await validateFontFileName(invalidFontFileName, yourPattern));
+console.log(await validateFontFileName(invalidFontFileName, yourRegex));
 ```
 
 ## Naming Convention
@@ -93,7 +99,7 @@ and separated by a **hyphen**.
 
 Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 
-> `{FontFamily}-{FontWeight}.{ext}`
+> `{FontFamily}-{FontWeight}.{extension}`
 
 ## Contributing
 
