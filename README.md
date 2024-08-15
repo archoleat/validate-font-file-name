@@ -47,29 +47,14 @@ yarn add -D @archoleat/validate-font-file-name
 ```js
 import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
-const validFontFileName = 'src/fonts/OpenSans-Regular.woff2';
-const invalidFontFileName = 'src/fonts/OpenSans.woff2';
-
-// returns: true
-console.log(await validateFontFileName(validFontFileName));
-
-// returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
-console.log(await validateFontFileName(invalidFontFileName));
-```
-
-or
-
-```js
-import { validateFontFileName } from '@archoleat/validate-font-file-name';
-
 const validFontFileName = 'OpenSans-Regular.woff2';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(await validateFontFileName(validFontFileName));
+console.log(await validateFontFileName({ file: validFontFileName }));
 
-// returns: 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
-console.log(await validateFontFileName(invalidFontFileName));
+// returns: {current time} [ERROR] 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
+console.log(await validateFontFileName({ file: invalidFontFileName }));
 ```
 
 ### Your Regex
@@ -86,10 +71,16 @@ const validFontFileName = 'OpenSans-regular';
 const invalidFontFileName = 'OpenSans.woff2';
 
 // returns: true
-console.log(await validateFontFileName(validFontFileName, yourRegex));
+console.log(await validateFontFileName({
+  file: validFontFileName,
+  regex: yourRegex,
+}));
 
-// returns: 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(await validateFontFileName(invalidFontFileName, yourRegex));
+// returns: {current time} [ERROR] 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
+console.log(await validateFontFileName({
+  file: invalidFontFileName,
+  regex: yourRegex,
+}));
 ```
 
 ## Naming Convention
