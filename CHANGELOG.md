@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0](https://github.com/archoleat/validate-font-file-name/compare/v1.0.10...v1.1.0) (2024-08-15)
+
+### Features
+
+* notifier and reglib ([#46](https://github.com/archoleat/validate-font-file-name/issues/46)) ([35d3faf](https://github.com/archoleat/validate-font-file-name/commit/35d3faf301508161886c8651951ffe35763477b4))
+
 ## [1.0.10](https://github.com/archoleat/validate-font-file-name/compare/v1.0.9...v1.0.10) (2024-04-09)
 
 
