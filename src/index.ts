@@ -3,7 +3,7 @@ import { parse } from 'node:path';
 import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 import { error } from '@archoleat/notifier';
 
-import type { Parameters } from '#types';
+import type { Parameters } from './parameters.d.ts';
 
 /**
  * The asynchronous function `validateFontFileName` validates
@@ -33,7 +33,10 @@ const validateFontFileName = async (parameters: Parameters) => {
   const match = selectRegex.test(fileName);
 
   if (!match) {
-    error({ message: `'${fileName}' doesn't match with '${selectRegex}'.` });
+    await error({
+      message: `'${fileName}' doesn't match with '${selectRegex}'.`,
+      messageLength: Infinity,
+    });
 
     return false;
   }

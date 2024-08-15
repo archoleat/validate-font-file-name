@@ -1,15 +1,11 @@
-import { resolve } from 'node:path';
-
 import { defineConfig } from 'rollup';
 
 import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
 
-import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
-const types = `${sourceFolder}/types`;
 
 const fileFormat = 'es';
 const fileName = 'index';
@@ -29,17 +25,7 @@ export default defineConfig([
     },
   },
   {
-    plugins: [
-      alias({
-        entries: [
-          {
-            find: '#types',
-            replacement: resolve(`${types}/${declarationFile}`),
-          },
-        ],
-      }),
-      dts(),
-    ],
+    plugins: [dts()],
     input: `${sourceFolder}/${indexFile}`,
     output: {
       file: declarationFile,
