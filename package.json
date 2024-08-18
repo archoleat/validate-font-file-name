@@ -52,15 +52,7 @@
   ],
   "scripts": {
     "init": "pnpm i && husky",
-    "spec": "vitest",
-    "spec:coverage": "vitest run --coverage",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript",
-    "release": "semantic-release",
-    "lint:editorconfig": "editorconfig-checker",
-    "lint:formatting": "prettier . --check",
-    "lint:md": "remark . --quiet --frail",
-    "lint:ts": "eslint src/index.ts --fix",
-    "prettify": "prettier . --write"
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "dependencies": {
     "@archoleat/notifier": "^1.0.0",
