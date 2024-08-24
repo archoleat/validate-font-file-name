@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.1](https://github.com/archoleat/validate-font-file-name/compare/v1.1.0...v1.1.1) (2024-08-24)
+
+### Code Refactoring
+
+* move scripts to ci ([#106](https://github.com/archoleat/validate-font-file-name/issues/106)) ([b6d39f2](https://github.com/archoleat/validate-font-file-name/commit/b6d39f2bc8241651f638f1251f96d63b93612319))
+* **prettierignore:** remove `.czrc` ([#108](https://github.com/archoleat/validate-font-file-name/issues/108)) ([d6916bb](https://github.com/archoleat/validate-font-file-name/commit/d6916bb34a8b223fad3f3c14ad1edce3e03efbe6))
+* **tsconfig:** remove `composite` option ([#101](https://github.com/archoleat/validate-font-file-name/issues/101)) ([3cb8f20](https://github.com/archoleat/validate-font-file-name/commit/3cb8f20b87feab42c519d3ee58a4c3a4cb91eed0))
+
+### Documentation
+
+* **readme:** remove extra scripts ([#102](https://github.com/archoleat/validate-font-file-name/issues/102)) ([c968205](https://github.com/archoleat/validate-font-file-name/commit/c968205e7c23f438e01c733caa54a8a6c0a0f937))
+* **readme:** rewrite examples ([#100](https://github.com/archoleat/validate-font-file-name/issues/100)) ([85c7d78](https://github.com/archoleat/validate-font-file-name/commit/85c7d781346a20ac8d17374eb8cbb3f14431086b))
+
 ## [1.1.0](https://github.com/archoleat/validate-font-file-name/compare/v1.0.10...v1.1.0) (2024-08-15)
 
 ### Features
