@@ -3,4 +3,4 @@ type Parameters = {
   regex?: string | RegExp;
 };
 
-export { Parameters };
+export type { Parameters };
