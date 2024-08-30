@@ -8,17 +8,18 @@ import typescript from '@rollup/plugin-typescript';
 const sourceFolder = 'src';
 
 const fileFormat = 'es';
-const fileName = 'index';
+const entryFileName = 'app';
+const outputFileName = 'index';
 
-const declarationFile = `${fileName}.d.ts`;
-const indexFile = `${fileName}.ts`;
-const outputFile = `${fileName}.js`;
+const declarationFile = `${outputFileName}.d.ts`;
+const entryFile = `${entryFileName}.ts`;
+const outputFile = `${outputFileName}.js`;
 
 export default defineConfig([
   {
     external: ['@archoleat/notifier', '@archoleat/reglib', 'node:path'],
     plugins: [typescript(), minify()],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: outputFile,
       format: fileFormat,
@@ -26,7 +27,7 @@ export default defineConfig([
   },
   {
     plugins: [dts()],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: declarationFile,
       format: fileFormat,
