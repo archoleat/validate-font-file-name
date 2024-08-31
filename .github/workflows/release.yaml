@@ -52,7 +52,7 @@ jobs:
         run: pnpm build
 
       - name: Pretty
-        run: pnpm prettier index.d.ts --write
+        run: pnpm prettier 'index.d.ts' --write
 
       - name: Create Release
         env:
