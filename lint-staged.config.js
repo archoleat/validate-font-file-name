@@ -1,4 +1,4 @@
 export default {
   '*': 'prettier --write',
-  'src/index.ts': 'eslint --fix',
+  'src/**/*.ts': 'eslint --fix',
 };

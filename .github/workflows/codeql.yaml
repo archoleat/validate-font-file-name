@@ -5,14 +5,13 @@ on:
     branches:
       - main
     paths:
-      - src/index.ts
-      - src/types/*.d.ts
+      - src/**/*.ts
+
   push:
     branches:
       - main
     paths:
-      - src/index.ts
-      - src/types/*.d.ts
+      - src/**/*.ts
 
 permissions:
   actions: read
