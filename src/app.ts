@@ -23,7 +23,6 @@ import type { Parameters } from './parameters.ts';
  * It returns `true` if the file name matches the specified regex,
  * and `false` if it does not match.
  */
-
 const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '' } = parameters;
 
@@ -34,7 +33,7 @@ const validateFontFileName = async (parameters: Parameters) => {
 
   if (!match) {
     await error({
-      message: [`(${fileName}) doesn't match with (${selectRegex})`],
+      message: `(${fileName}) doesn't match with (${selectRegex})`,
     });
 
     return false;
