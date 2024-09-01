@@ -51,7 +51,7 @@
     "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "dependencies": {
-    "@archoleat/notifier": "^1.0.0",
+    "@archoleat/notifier": "^1.0.2",
     "@archoleat/reglib": "^1.1.0"
   },
   "devDependencies": {
