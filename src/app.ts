@@ -6,22 +6,15 @@ import { error } from '@archoleat/notifier';
 import type { Parameters } from './parameters.ts';
 
 /**
- * The asynchronous function `validateFontFileName` validates
- * if a given font file name matches a specific regex.
+ * Validates the font file name.
  *
- * @param {string} file - The `file` parameter in the `validateFontFileName`
- * function is a string that represents the file name of a font file that
- * you want to validate.
+ * @param {string} file - The file path of the font file.
  *
- * @param {string | RegExp} regex - The `regex` parameter in the
- * `validateFontFileName` function is used to provide a custom regular
- * expression for validating the font file name. If a custom
- * regex is not provided, the function uses a default regex
- * to validate the font file name.
+ * @param {string} [regex=''] - The regular expression pattern to
+ * match the font file name.
  *
- * @returns The function `validateFontFileName` is returning a boolean value.
- * It returns `true` if the file name matches the specified regex,
- * and `false` if it does not match.
+ * @return {boolean} - Return true if the font file name matches the
+ * specified regex pattern, false otherwise.
  */
 const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '' } = parameters;
