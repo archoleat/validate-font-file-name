@@ -16,7 +16,6 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Naming Convention](#naming-convention)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -28,53 +27,25 @@ bun i -D @archoleat/validate-font-file-name
 
 ## Usage
 
-```js
-import { validateFontFileName } from '@archoleat/validate-font-file-name';
-
-const validFontFileName = 'OpenSans-Regular.woff2';
-const invalidFontFileName = 'OpenSans.woff2';
-
-// returns: true
-console.log(await validateFontFileName({ file: validFontFileName }));
-
-// returns: {current time} [ERROR] 'OpenSans.woff2' doesn't match with '/(^[A-Z][a-z]+([A-Z][a-z]+)?)-(Thin|Hairline|ExtraLight|UltraLight|Light|Regular|Medium|SemiBold|DemiBold|Bold|ExtraBold|UltraBold|Black|Heavy|ExtraBlack|UltraBlack)\.(otf|ttf|woff|woff2)$/'.
-console.log(await validateFontFileName({ file: invalidFontFileName }));
-```
-
-### Your Regex
-
-You can also specify your regex:
-
-```js
-import { validateFontFileName } from '@archoleat/validate-font-file-name';
-
-// You can also specify `new RegExp()` and a regular `string`
-const yourRegex = /OpenSans-regular/;
-
-const validFontFileName = 'OpenSans-regular';
-const invalidFontFileName = 'OpenSans.woff2';
-
-// returns: true
-console.log(await validateFontFileName({
-  file: validFontFileName,
-  regex: yourRegex,
-}));
-
-// returns: {current time} [ERROR] 'OpenSans.woff2' doesn't match with '/OpenSans-regular/'.
-console.log(await validateFontFileName({
-  file: invalidFontFileName,
-  regex: yourRegex,
-}));
-```
-
-## Naming Convention
+### Naming Convention
 
 The **font family** and **font weight** must be in **Pascal Case**
 and separated by a **hyphen**.
 
 Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 
-> `{FontFamily}-{FontWeight}.{extension}`
+> Example: `OpenSans-SemiBold.woff2`.
+
+It's not necessary to specify the `regex` parameter.
+
+```js
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
+
+await validateFontFileName({
+  file: 'path/to/file',
+  regex: /regex/ | new RegExp() | '',
+});
+```
 
 ## Contributing
 
