@@ -11,7 +11,7 @@
   "homepage": "https://github.com/archoleat/validate-font-file-name#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/archoleat/validate-font-file-name.git"
+    "url": "git+https://github.com/archoleat/validate-font-file-name.git"
   },
   "bugs": {
     "url": "https://github.com/archoleat/validate-font-file-name/issues"
