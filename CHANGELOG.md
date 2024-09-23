@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/archoleat/validate-font-file-name/compare/v1.1.3...v1.2.0) (2024-09-23)
+
+### Features
+
+* add `funding.yaml` ([#125](https://github.com/archoleat/validate-font-file-name/issues/125)) ([236f97c](https://github.com/archoleat/validate-font-file-name/commit/236f97c5f3ec25509697954e07fd1021078110a3))
+
+### Code Refactoring
+
+* **package:** add `git+` ([#123](https://github.com/archoleat/validate-font-file-name/issues/123)) ([3f46723](https://github.com/archoleat/validate-font-file-name/commit/3f467231b4cf52e7549c9b5ad6d8f293d264d7cc))
+* architecture ([#126](https://github.com/archoleat/validate-font-file-name/issues/126)) ([1085044](https://github.com/archoleat/validate-font-file-name/commit/108504497e19aee73761f108bdd668c9d6042609))
+* **prettier:** remove json override ([#124](https://github.com/archoleat/validate-font-file-name/issues/124)) ([1bd9279](https://github.com/archoleat/validate-font-file-name/commit/1bd9279082e0d5af179722b7d6a4d8d48544a78a))
+
 ## [1.1.3](https://github.com/archoleat/validate-font-file-name/compare/v1.1.2...v1.1.3) (2024-09-01)
 
 ### Code Refactoring
