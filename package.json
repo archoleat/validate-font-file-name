@@ -37,7 +37,8 @@
   "type": "module",
   "types": "index.d.ts",
   "imports": {
-    "#app": "./src/app.ts"
+    "#index": "./src/index.ts",
+    "#types": "./src/types/index.ts"
   },
   "exports": {
     ".": "./index.js"
@@ -62,6 +63,7 @@
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
     "@commitlint/types": "^19.0.3",
+    "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
