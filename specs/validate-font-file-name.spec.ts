@@ -7,6 +7,9 @@ const positiveCases = [
   'src/fonts/OpenSans-SemiBold.woff',
   'Open-SemiBold.otf',
   'OpenSans-SemiBold.ttf',
+  'OpenSans-SemiBoldItalic.woff2',
+  'OpenSans-SemiBoldVariable.woff2',
+  'OpenSans-SemiBoldItalicVariable.woff2',
 ];
 
 const negativeCases = [
