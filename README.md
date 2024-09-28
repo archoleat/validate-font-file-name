@@ -27,6 +27,18 @@ bun i -D @archoleat/validate-font-file-name
 
 ## Usage
 
+```js
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
+
+await validateFontFileName({
+  file: string,
+  regex?: string | RegExp,
+  flags?: string
+});
+```
+
+- `flags`: available when you are using `regex` parameter.
+
 ### Naming Convention
 
 The **font family** and **font weight** must be in **Pascal Case**
@@ -39,19 +51,6 @@ Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
 > Examples: `OpenSans-SemiBold.woff2`,
 > `OpenSans-SemiBoldItalic.woff`, `OpenSans-SemiBoldVariable.otf`,
 > `OpenSans-SemiBoldItalicVariable.ttf`.
-
-It's not necessary to specify the `regex` parameter.
-The `flags` parameter is only available when you are using `regex` parameter.
-
-```js
-import { validateFontFileName } from '@archoleat/validate-font-file-name';
-
-await validateFontFileName({
-  file: 'path/to/file',
-  regex: /regex/ | new RegExp() | 'string',
-  flags: 'gi'
-});
-```
 
 ## Contributing
 
