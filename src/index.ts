@@ -13,8 +13,10 @@ import type { Parameters } from '#types';
  * @param {string|RegExp} [regex=''] - The regular expression pattern to
  * match the font file name.
  *
+ * @param {string} [flags=''] - The flags for the regular expression pattern.
+ *
  * @return {boolean} - Return true if the font file name matches the
- * specified regex pattern, false otherwise.
+ * specified or default regex pattern, false otherwise.
  */
 const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '', flags = '' } = parameters;

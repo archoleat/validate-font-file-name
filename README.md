@@ -46,11 +46,11 @@ and separated by a **hyphen**.
 
 Postfixes that are allowed: `Italic`, `Variable`.
 
-Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
+Extensions that are allowed: `woff2`, `woff`, `otf`, `ttf`.
 
-> Examples: `OpenSans-SemiBold.woff2`,
-> `OpenSans-SemiBoldItalic.woff`, `OpenSans-SemiBoldVariable.otf`,
-> `OpenSans-SemiBoldItalicVariable.ttf`.
+> Examples: `FontFamily-Bold.woff2`,
+> `FontFamily-SemiBoldItalic.woff`, `FontFamily-MediumVariable.otf`,
+> `FontFamily-RegularItalicVariable.ttf`.
 
 ## Contributing
 
