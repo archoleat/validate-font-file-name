@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/validate-font-file-name",
-  "description": "Checking font file names for standardization",
+  "description": "Validate font file names",
   "version": "1.2.0",
   "license": "MIT",
   "author": {
@@ -19,11 +19,9 @@
   "keywords": [
     "archoleat-font-file-name",
     "archoleat",
-    "font-file-name-standard",
     "font-file-name",
     "naming",
     "plugin",
-    "standard",
     "validate-font-file-name",
     "validate-name",
     "validate",
