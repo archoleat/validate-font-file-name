@@ -22,8 +22,8 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8(eslint@8.57.0)
       '@archoleat/prettier-define-config':
-        specifier: ^1.0.2
-        version: 1.0.2(prettier@3.3.3)
+        specifier: ^1.1.0
+        version: 1.1.0(prettier@3.3.3)
       '@archoleat/semantic-release-define-config':
         specifier: ^1.1.16
         version: 1.1.16(semantic-release@24.1.0(typescript@5.5.4))
@@ -163,8 +163,8 @@ packages:
     resolution: {integrity: sha512-vZ1HcS33Vj5GbFnq+ZSJB0NLBRglw9P6CePjwtlTEpHcLFuUMo41gGxsBieR5sxvgWhEKfd5O626fKfqCfzNAg==}
     engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
 
-  '@archoleat/prettier-define-config@1.0.2':
-    resolution: {integrity: sha512-loh+VC+VZ1j0HD6sKaoC3gBiHDZb63UWD03Fg/sbkCy/Oalx/LlY41hUN6qUDeb2tRMQfinMogXw8iS7wEQSXQ==}
+  '@archoleat/prettier-define-config@1.1.0':
+    resolution: {integrity: sha512-SMTefgQJMUs8PbZrebIkk0KXiT8t+SEjUSFGF6/ukv7J/rQH3DYjAq60ngOzPxzbPUSR7oT7nqllkyLJmIosPQ==}
     engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
     peerDependencies:
       prettier: ^3.3.3
@@ -4050,7 +4050,7 @@ snapshots:
       chalk: 5.3.0
       node-notifier: 10.0.1
 
-  '@archoleat/prettier-define-config@1.0.2(prettier@3.3.3)':
+  '@archoleat/prettier-define-config@1.1.0(prettier@3.3.3)':
     dependencies:
       prettier: 3.3.3
 
