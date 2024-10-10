@@ -10,21 +10,33 @@ import type { Parameters } from '#types';
  *
  * @param {string} file - The file path of the font file.
  *
- * @param {string} [regex=''] - The regular expression pattern to
+ * @param {string|RegExp} [regex=''] - The regular expression pattern to
  * match the font file name.
  *
+ * @param {string} [flags=''] - The flags for the regular expression pattern.
+ *
  * @return {boolean} - Return true if the font file name matches the
- * specified regex pattern, false otherwise.
+ * specified or default regex pattern, false otherwise.
  */
 const validateFontFileName = async (parameters: Parameters) => {
-  const { file, regex = '' } = parameters;
+  const { file, regex = '', flags = '' } = parameters;
+
+  if (!file || typeof file !== 'string') {
+    await error({
+      message: 'Invalid file provided. File must be a non-empty string.',
+    });
+
+    return false;
+  }
 
   const fileName = parse(file).base;
-  const regexType = typeof regex === 'string' && regex !== '';
-  const selectRegex = regexType ? new RegExp(regex) : regex || FONT_FILE_NAME_REGEX;
-  const match = selectRegex.test(fileName);
+  const isRegex = typeof regex === 'string' && regex !== '';
+  const selectRegex = isRegex
+    ? new RegExp(regex, regex && flags)
+    : regex || FONT_FILE_NAME_REGEX;
+  const testFileName = selectRegex.test(fileName);
 
-  if (!match) {
+  if (!testFileName) {
     await error({
       message: `(${fileName}) doesn't match with (${selectRegex})`,
     });
