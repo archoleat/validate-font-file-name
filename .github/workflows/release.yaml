@@ -49,9 +49,9 @@ jobs:
         run: pnpm i
 
       - name: Build
-        run: pnpm build
+        run: pnpm rollup -c rollup.config.ts --configPlugin typescript
 
-      - name: Pretty
+      - name: Prettify
         run: pnpm prettier 'index.d.ts' --write
 
       - name: Create Release
