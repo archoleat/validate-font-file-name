@@ -1,7 +1,7 @@
 import { parse } from 'node:path';
 
-import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 import { error } from '@archoleat/notifier';
+import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 
 import type { Parameters } from '#types';
 
