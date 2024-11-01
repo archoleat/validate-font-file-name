@@ -16,8 +16,8 @@ importers:
         version: 1.1.0
     devDependencies:
       '@archoleat/commitlint-define-config':
-        specifier: ^1.0.11
-        version: 1.0.11(@commitlint/cli@19.4.1(@types/node@22.5.2)(typescript@5.5.4))(@commitlint/config-conventional@19.4.1)(@commitlint/types@19.0.3)
+        specifier: ^1.1.0
+        version: 1.1.0(@commitlint/cli@19.4.1(@types/node@22.5.2)(typescript@5.5.4))(@commitlint/config-conventional@19.4.1)(@commitlint/types@19.0.3)
       '@archoleat/eslint-flat-compatibility':
         specifier: ^1.1.8
         version: 1.1.8(eslint@8.57.0)
@@ -145,8 +145,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@archoleat/commitlint-define-config@1.0.11':
-    resolution: {integrity: sha512-zIf5x814X2ujBrQTGyt1DpgN8u5M4ASzFjTDfMso/PyWDshZFS8Y0DtiJEbuZAz8R/FFCk8rzsmNPQSJaXHUGQ==}
+  '@archoleat/commitlint-define-config@1.1.0':
+    resolution: {integrity: sha512-3nsQQm9sjCWSxqSGN+RoXdd7T8UZCBt4Hep6pS7yz3s5Iry+bVzfVbr/zpeDt/gIocJ3n3P4wizrKqXUrh4RAA==}
     engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
     peerDependencies:
       '@commitlint/cli': ^19.0.0
@@ -156,6 +156,7 @@ packages:
   '@archoleat/eslint-flat-compatibility@1.1.8':
     resolution: {integrity: sha512-CDEEJKUmcNheJF/GsoBdMtiDNJI2k3WzAafH/Zlds6pAPjWpdciRS5XS4ZwRnl1p7U4cHYpku84UuLtrVr0MxA==}
     engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
@@ -1603,6 +1604,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@10.1.0:
@@ -4031,7 +4033,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@archoleat/commitlint-define-config@1.0.11(@commitlint/cli@19.4.1(@types/node@22.5.2)(typescript@5.5.4))(@commitlint/config-conventional@19.4.1)(@commitlint/types@19.0.3)':
+  '@archoleat/commitlint-define-config@1.1.0(@commitlint/cli@19.4.1(@types/node@22.5.2)(typescript@5.5.4))(@commitlint/config-conventional@19.4.1)(@commitlint/types@19.0.3)':
     dependencies:
       '@commitlint/cli': 19.4.1(@types/node@22.5.2)(typescript@5.5.4)
       '@commitlint/config-conventional': 19.4.1
