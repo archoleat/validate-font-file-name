@@ -64,8 +64,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0
       editorconfig-checker:
-        specifier: ^5.1.8
-        version: 5.1.8
+        specifier: ^6.0.0
+        version: 6.0.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -156,6 +156,7 @@ packages:
   '@archoleat/eslint-flat-compatibility@1.1.8':
     resolution: {integrity: sha512-CDEEJKUmcNheJF/GsoBdMtiDNJI2k3WzAafH/Zlds6pAPjWpdciRS5XS4ZwRnl1p7U4cHYpku84UuLtrVr0MxA==}
     engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
@@ -1383,9 +1384,9 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  editorconfig-checker@5.1.8:
-    resolution: {integrity: sha512-GM/qCbXA8GajSqqjXiWZN49i0nizQV5PjkVKIwWB9rtsm/pztjnBC+4dts5wW2KdrP2zyMPEltWHtWQwoCadqg==}
-    engines: {node: '>=18.0.0'}
+  editorconfig-checker@6.0.0:
+    resolution: {integrity: sha512-uyTOwLJzR/k7ugiu7ITjCzkLKBhXeirQZ8hGlUkt1u/hq2Qu1E8EslgFZDN+lxZoQc97eiI87sUFgVILK4P+YQ==}
+    engines: {node: '>=20.11.0'}
     hasBin: true
 
   electron-to-chromium@1.5.13:
@@ -1603,6 +1604,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@10.1.0:
@@ -5377,7 +5379,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  editorconfig-checker@5.1.8: {}
+  editorconfig-checker@6.0.0: {}
 
   electron-to-chromium@1.5.13: {}
 
