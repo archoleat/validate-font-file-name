@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@archoleat/notifier": "^1.0.3",
-    "@archoleat/reglib": "^1.1.0"
+    "@archoleat/reglib": "^1.2.0"
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.1.0",
@@ -64,7 +64,7 @@
     "@rollup/plugin-typescript": "^12.1.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.8.6",
+    "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitest/coverage-v8": "^2.1.4",
@@ -80,7 +80,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^56.0.0",
     "git-pull-run": "^1.4.0",
-    "globals": "^15.11.0",
+    "globals": "^15.12.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
@@ -89,7 +89,7 @@
     "remark-preset-lint-consistent": "^6.0.0",
     "remark-preset-lint-markdown-style-guide": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",
-    "rollup": "^4.24.3",
+    "rollup": "^4.25.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
     "semantic-release": "^24.2.0",
