@@ -4,7 +4,6 @@
 ![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fvalidate-font-file-name)
 ![ESM](https://img.shields.io/badge/ESM-fe0)
 ![Provenance](https://img.shields.io/badge/Provenance-fo0)
-![CodeQL](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/codeql.yaml?label=CodeQL)
 ![Specs](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/spec.yaml?label=Specs)
 ![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/commitlint.yaml?label=Commitlint)
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/editorconfig.yaml?label=Editorconfig)
@@ -27,25 +26,27 @@ bun i -D @archoleat/validate-font-file-name
 
 ## Usage
 
+```js
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
+
+await validateFontFileName({
+  file: string,
+  regex?: string | RegExp,
+});
+```
+
 ### Naming Convention
 
 The **font family** and **font weight** must be in **Pascal Case**
 and separated by a **hyphen**.
 
-Extensions that are allowed: `otf`, `ttf`, `woff`, `woff2`.
+Postfixes that are allowed: `Italic`, `Variable`.
 
-> Example: `OpenSans-SemiBold.woff2`.
+Extensions that are allowed: `woff2`, `woff`, `otf`, `ttf`.
 
-It's not necessary to specify the `regex` parameter.
-
-```js
-import { validateFontFileName } from '@archoleat/validate-font-file-name';
-
-await validateFontFileName({
-  file: 'path/to/file',
-  regex: /regex/ | new RegExp() | '',
-});
-```
+> Examples: `FontFamily-Bold.woff2`,
+> `FontFamily-SemiBoldItalic.woff`, `FontFamily-MediumVariable.otf`,
+> `FontFamily-RegularItalicVariable.ttf`.
 
 ## Contributing
 

@@ -1,115 +1,67 @@
-import { beforeEach, describe, expect, test as spec } from 'vitest';
+import { describe, expect, test as spec } from 'vitest';
 
 import { validateFontFileName } from '#index';
 
+const positiveCases = [
+  'FontFamily-UltraBlack.woff2',
+  'src/fonts/FontFamily-ExtraBlack.woff',
+  'Font-Heavy.otf',
+  'FontFamily-Black.ttf',
+  'FontFamily-UltraBoldItalic.woff2',
+  'FontFamily-ExtraBoldVariable.woff2',
+  'FontFamily-BoldItalicVariable.woff2',
+];
+
+const positiveCustomCases = ['fontfamily-ultrablack.woff2'];
+
+const negativeCases = [
+  '',
+  'Font-Family-UltraBlack.woff2',
+  'src/fonts/FontFamily.woff',
+  'FontFamily-ExtraBlack.unknown',
+  'FontFamily-Heavy.woff2.otf',
+  '-FontFamily-UltraBold.ttf',
+  'FONTFAMILY-ExtraBold.woff2',
+  'FontFamily-400.woff',
+  'FontFamily123-Bold.otf',
+  'fontFamily-DemiBold.ttf',
+  'FontFamily-semiBold.woff2',
+  'FontFamily-Semibold.woff',
+  'FontFamily-semibold.otf',
+  'FontFamily-MEDIUM.ttf',
+  'FontFamily-Semiold.woff2',
+  'FontFamily-Premium-Regular.woff',
+  'FontFamily-.otf',
+  '-UltraLight.ttf',
+  'FontFamily.woff2',
+];
+
+const negativeCustomCases = ['FONTFAMILY-ULTRABLACK.WOFF2'];
+
 describe('Validate Font File Name', async () => {
-  let validate: Function;
-
-  beforeEach(async () => {
-    validate = async (file: string, equal: boolean, regex?: string | RegExp) => {
-      await validateFontFileName({ file, regex }).then((parameters) => {
-        expect(parameters).toEqual(equal);
-      });
-    };
+  positiveCases.forEach(async (file) => {
+    spec(`should validate ${file}`, async () => {
+      expect(await validateFontFileName({ file })).toEqual(true);
+    });
   });
 
-  spec('OpenSans-SemiBold.woff2', async () => {
-    await validate('OpenSans-SemiBold.woff2', true);
+  negativeCases.forEach(async (file) => {
+    spec(`should not validate ${file}`, async () => {
+      expect(await validateFontFileName({ file })).toEqual(false);
+    });
   });
 
-  spec('regex: /OpenSans-SemiBold\\.woff2/', async () => {
-    await validate('OpenSans-SemiBold.woff2', true, /OpenSans-SemiBold\.woff2/);
+  positiveCustomCases.forEach(async (file) => {
+    spec(`should validate ${file}`, async () => {
+      expect(await validateFontFileName({ file, regex: /\w+/i })).toEqual(true);
+    });
   });
 
-  spec("regex: new RegExp('OpenSans-SemiBold.woff2')", async () => {
-    await validate(
-      'OpenSans-SemiBold.woff2',
-      true,
-      new RegExp('OpenSans-SemiBold.woff2'),
-    );
-  });
-
-  spec("regex: 'OpenSans-SemiBold.woff2'", async () => {
-    await validate('OpenSans-SemiBold.woff2', true, 'OpenSans-SemiBold.woff2');
-  });
-
-  spec('Open-SemiBold.woff2', async () => {
-    await validate('Open-SemiBold.woff2', true);
-  });
-
-  spec('src/fonts/OpenSans-SemiBold.woff2', async () => {
-    await validate('src/fonts/OpenSans-SemiBold.woff2', true);
-  });
-
-  spec('Open-Sans-SemiBold.woff2', async () => {
-    await validate('Open-Sans-SemiBold.woff2', false);
-  });
-
-  spec('src/fonts/OpenSans.woff2', async () => {
-    await validate('src/fonts/OpenSans.woff2', false);
-  });
-
-  spec('OpenSans-SemiBold.unknown', async () => {
-    await validate('OpenSans-SemiBold.unknown', false);
-  });
-
-  spec('OpenSans-SemiBold.woff2.woff2', async () => {
-    await validate('OpenSans-SemiBold.woff2.woff2', false);
-  });
-
-  spec('-OpenSans-SemiBold.woff2', async () => {
-    await validate('-OpenSans-Semibold.woff2', false);
-  });
-
-  spec('OPENSANS-SemiBold.woff2', async () => {
-    await validate('OPENSANS-SemiBold.woff2', false);
-  });
-
-  spec('OpenSans-400.woff2', async () => {
-    await validate('OpenSans-400.woff2', false);
-  });
-
-  spec('OpenSans123-SemiBold.woff2', async () => {
-    await validate('OpenSans123-SemiBold.woff2', false);
-  });
-
-  spec('openSans-SemiBold.woff2', async () => {
-    await validate('openSans-SemiBold.woff2', false);
-  });
-
-  spec('OpenSans-semiBold.woff2', async () => {
-    await validate('OpenSans-semiBold.woff2', false);
-  });
-
-  spec('OpenSans-Semibold.woff2', async () => {
-    await validate('OpenSans-Semibold.woff2', false);
-  });
-
-  spec('OpenSans-semibold.woff2', async () => {
-    await validate('OpenSans-semibold.woff2', false);
-  });
-
-  spec('OpenSans-SEMIBOLD.woff2', async () => {
-    await validate('OpenSans-SEMIBOLD.woff2', false);
-  });
-
-  spec('OpenSans-Semiold.woff2', async () => {
-    await validate('OpenSans-Semiold.woff2', false);
-  });
-
-  spec('OpenSans-Premium-SemiBold.woff2', async () => {
-    await validate('OpenSans-Premium-SemiBold.woff2', false);
-  });
-
-  spec('OpenSans-.woff2', async () => {
-    await validate('OpenSans-.woff2', false);
-  });
-
-  spec('-SemiBold.woff2', async () => {
-    await validate('-SemiBold.woff2', false);
-  });
-
-  spec('OpenSans.woff2', async () => {
-    await validate('OpenSans.woff2', false);
+  negativeCustomCases.forEach(async (file) => {
+    spec(`should not validate ${file}`, async () => {
+      expect(
+        await validateFontFileName({ file, regex: new RegExp('123', 'g') }),
+      ).toEqual(false);
+    });
   });
 });
