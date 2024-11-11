@@ -13,6 +13,7 @@ const positiveCases = [
 ];
 
 const negativeCases = [
+  '',
   'Font-Family-UltraBlack.woff2',
   'src/fonts/FontFamily.woff',
   'FontFamily-ExtraBlack.unknown',

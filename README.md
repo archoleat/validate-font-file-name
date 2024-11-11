@@ -32,11 +32,8 @@ import { validateFontFileName } from '@archoleat/validate-font-file-name';
 await validateFontFileName({
   file: string,
   regex?: string | RegExp,
-  flags?: string,
 });
 ```
-
-- `flags`: available when you are using `regex` parameter.
 
 ### Naming Convention
 
