@@ -12,6 +12,8 @@ const positiveCases = [
   'FontFamily-BoldItalicVariable.woff2',
 ];
 
+const positiveCustomCases = ['fontfamily-ultrablack.woff2'];
+
 const negativeCases = [
   '',
   'Font-Family-UltraBlack.woff2',
@@ -34,6 +36,8 @@ const negativeCases = [
   'FontFamily.woff2',
 ];
 
+const negativeCustomCases = ['FONTFAMILY-ULTRABLACK.WOFF2'];
+
 describe('Validate Font File Name', async () => {
   positiveCases.forEach(async (file) => {
     spec(`should validate ${file}`, async () => {
@@ -44,6 +48,20 @@ describe('Validate Font File Name', async () => {
   negativeCases.forEach(async (file) => {
     spec(`should not validate ${file}`, async () => {
       expect(await validateFontFileName({ file })).toEqual(false);
+    });
+  });
+
+  positiveCustomCases.forEach(async (file) => {
+    spec(`should validate ${file}`, async () => {
+      expect(await validateFontFileName({ file, regex: /\w+/i })).toEqual(true);
+    });
+  });
+
+  negativeCustomCases.forEach(async (file) => {
+    spec(`should not validate ${file}`, async () => {
+      expect(
+        await validateFontFileName({ file, regex: new RegExp('123', 'g') }),
+      ).toEqual(false);
     });
   });
 });
