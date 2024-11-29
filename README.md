@@ -2,8 +2,6 @@
 
 ![NPM Version](https://img.shields.io/npm/v/%40archoleat%2Fvalidate-font-file-name)
 ![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fvalidate-font-file-name)
-![ESM](https://img.shields.io/badge/ESM-fe0)
-![Provenance](https://img.shields.io/badge/Provenance-fo0)
 ![Specs](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/spec.yaml?label=Specs)
 ![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/commitlint.yaml?label=Commitlint)
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/validate-font-file-name/editorconfig.yaml?label=Editorconfig)
