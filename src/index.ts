@@ -3,7 +3,7 @@ import { parse } from 'node:path';
 import { error } from '@archoleat/notifier';
 import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 
-import type { Parameters } from '#types';
+import type { Parameters } from '#types/parameters.ts';
 
 /**
  * Validates the font file name.

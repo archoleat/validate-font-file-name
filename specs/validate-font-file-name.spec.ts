@@ -1,6 +1,6 @@
 import { describe, expect, test as spec } from 'vitest';
 
-import { validateFontFileName } from '#index';
+import { validateFontFileName } from '#src/index.ts';
 
 const positiveCases = [
   'FontFamily-UltraBlack.woff2',
