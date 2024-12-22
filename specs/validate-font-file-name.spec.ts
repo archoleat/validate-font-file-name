@@ -1,4 +1,4 @@
-import { describe, expect, test as spec } from 'vitest';
+import { describe, expect, test as spec } from 'bun:test';
 
 import { validateFontFileName } from '#src/index.ts';
 
