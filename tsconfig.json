@@ -33,6 +33,5 @@
     "strict": true
   },
   "exclude": ["specs"],
-  "extends": ["./tsconfig.node.json"],
   "include": ["src"]
 }
