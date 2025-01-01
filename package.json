@@ -47,7 +47,7 @@
     "init": "bun i && husky"
   },
   "dependencies": {
-    "@archoleat/notifier": "^1.1.1",
+    "@archoleat/notifier": "^1.1.2",
     "@archoleat/reglib": "^1.2.0"
   },
   "devDependencies": {
