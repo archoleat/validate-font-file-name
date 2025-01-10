@@ -17,7 +17,7 @@
       "#types/*": ["./src/types/*"]
     },
     "rootDir": "src",
-    "types": ["node", "vitest"],
+    "types": ["node"],
     // Projects
     "disableReferencedProjectLoad": true,
     // Type Checking
