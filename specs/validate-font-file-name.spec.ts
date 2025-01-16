@@ -2,7 +2,7 @@ import { describe, expect, test as spec } from 'bun:test';
 
 import { validateFontFileName } from '#src/index.ts';
 
-const positiveCases = [
+const validTestCases = [
   'FontFamily-UltraBlack.woff2',
   'src/fonts/FontFamily-ExtraBlack.woff',
   'Font-Heavy.otf',
@@ -10,11 +10,15 @@ const positiveCases = [
   'FontFamily-UltraBoldItalic.woff2',
   'FontFamily-ExtraBoldVariable.woff2',
   'FontFamily-BoldItalicVariable.woff2',
+  'path/to/fonts/Roboto-Bold.otf',
+  'another/path/OpenSans-Light.ttf',
 ];
 
-const positiveCustomCases = ['fontfamily-ultrablack.woff2'];
+const validCustomCases = [
+  { file: 'fontfamily-ultrablack.woff2', regex: /^[a-z]+-[a-z]+\.woff2$/ },
+];
 
-const negativeCases = [
+const invalidTestCases = [
   '',
   'Font-Family-UltraBlack.woff2',
   'src/fonts/FontFamily.woff',
@@ -34,34 +38,36 @@ const negativeCases = [
   'FontFamily-.otf',
   '-UltraLight.ttf',
   'FontFamily.woff2',
+  'path/to/fonts/Roboto-Bold',
+  'another/path/OpenSans-Light.pdf',
 ];
 
-const negativeCustomCases = ['FONTFAMILY-ULTRABLACK.WOFF2'];
+const invalidCustomCases = [
+  { file: 'FONTFAMILY-ULTRABLACK.WOFF2', regex: /^[a-z]+-[a-z]+\.woff2$/ },
+];
 
-describe('Validate Font File Name', async () => {
-  positiveCases.forEach(async (file) => {
+describe('Validate Font File Name', () => {
+  validTestCases.forEach((file) => {
     spec(`should validate ${file}`, async () => {
-      expect(await validateFontFileName({ file })).toEqual(true);
+      expect(await validateFontFileName({ file })).toBe(true);
     });
   });
 
-  negativeCases.forEach(async (file) => {
+  invalidTestCases.forEach((file) => {
     spec(`should not validate ${file}`, async () => {
-      expect(await validateFontFileName({ file })).toEqual(false);
+      expect(await validateFontFileName({ file })).toBe(false);
     });
   });
 
-  positiveCustomCases.forEach(async (file) => {
-    spec(`should validate ${file}`, async () => {
-      expect(await validateFontFileName({ file, regex: /\w+/i })).toEqual(true);
+  validCustomCases.forEach(({ file, regex }) => {
+    spec(`should validate ${file} with custom regex`, async () => {
+      expect(await validateFontFileName({ file, regex })).toBe(true);
     });
   });
 
-  negativeCustomCases.forEach(async (file) => {
-    spec(`should not validate ${file}`, async () => {
-      expect(
-        await validateFontFileName({ file, regex: new RegExp('123', 'g') }),
-      ).toEqual(false);
+  invalidCustomCases.forEach(({ file, regex }) => {
+    spec(`should not validate ${file} with custom regex`, async () => {
+      expect(await validateFontFileName({ file, regex })).toBe(false);
     });
   });
 });
