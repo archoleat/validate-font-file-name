@@ -5,17 +5,6 @@ import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 
 import type { Parameters } from '#types/parameters.ts';
 
-/**
- * Validates the font file name.
- *
- * @param {string} file - The file path of the font file.
- *
- * @param {string|RegExp} [regex=''] - The regular expression pattern to
- * match the font file name.
- *
- * @return {boolean} - Return true if the font file name matches the
- * specified or default regex pattern, false otherwise.
- */
 const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '' } = parameters;
 
