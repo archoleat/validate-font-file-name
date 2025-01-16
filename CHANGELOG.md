@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.2.2](https://github.com/archoleat/validate-font-file-name/compare/v1.2.1...v1.2.2) (2025-01-16)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to bun (#148)
+
+### Bug Fixes
+
+* checker ([#156](https://github.com/archoleat/validate-font-file-name/issues/156)) ([c3a1d82](https://github.com/archoleat/validate-font-file-name/commit/c3a1d828e7acf0b18cfabe11ade744bf8a0f4671))
+* tsconfig.json ([#147](https://github.com/archoleat/validate-font-file-name/issues/147)) ([29260bd](https://github.com/archoleat/validate-font-file-name/commit/29260bdd9ddd49f4f3b4d0328670db236e525b44))
+
+### Code Refactoring
+
+* ecrc ([523ef8f](https://github.com/archoleat/validate-font-file-name/commit/523ef8f73a7476d9ad4cf6d3458a5dcbc0860bc6))
+* migrate to bun ([#148](https://github.com/archoleat/validate-font-file-name/issues/148)) ([d98dfde](https://github.com/archoleat/validate-font-file-name/commit/d98dfdeae1ba97a1601561e9bfada30d6133ff77))
+* prettierignore ([65e36dc](https://github.com/archoleat/validate-font-file-name/commit/65e36dcbd97f16bc01ea86550c45d586cadb999f))
+* small changes ([#144](https://github.com/archoleat/validate-font-file-name/issues/144)) ([9c35e30](https://github.com/archoleat/validate-font-file-name/commit/9c35e3068e8b897038ef5b9160e53a60b5fe13c8))
+* small changes ([#146](https://github.com/archoleat/validate-font-file-name/issues/146)) ([90acaa0](https://github.com/archoleat/validate-font-file-name/commit/90acaa0d5818803a8bc4b8709b2e6144ecc696ff))
+* specs ([#157](https://github.com/archoleat/validate-font-file-name/issues/157)) ([c30904b](https://github.com/archoleat/validate-font-file-name/commit/c30904bea456e8f73f929571c5a2257512418bef))
+* structure ([#145](https://github.com/archoleat/validate-font-file-name/issues/145)) ([73cdcbc](https://github.com/archoleat/validate-font-file-name/commit/73cdcbc638e1bbf877a6f2f5ad7d2a7fbc564cad))
+* tsconfig ([029a89f](https://github.com/archoleat/validate-font-file-name/commit/029a89fc70d06c64b739d345e20102c0691259bd))
+
+### Documentation
+
+* **readme:** remove extra badges ([#138](https://github.com/archoleat/validate-font-file-name/issues/138)) ([d407851](https://github.com/archoleat/validate-font-file-name/commit/d4078514b528276240da4ae73dc3e35a55c422f1))
+
 ## [1.2.1](https://github.com/archoleat/validate-font-file-name/compare/v1.2.0...v1.2.1) (2024-11-11)
 
 ### Code Refactoring
