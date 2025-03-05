@@ -33,7 +33,6 @@ export default defineConfig([
           },
         ],
       }),
-      ,
       dts(),
     ],
     input: `${sourceFolder}/${entryFile}`,
