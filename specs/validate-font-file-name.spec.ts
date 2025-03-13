@@ -51,23 +51,23 @@ describe('Validate Font File Name', () => {
     spec(`should validate ${file}`, async () => {
       expect(await validateFontFileName({ file })).toBe(true);
     });
-  });
+  };
 
   for (const file of invalidTestCases) {
     spec(`should not validate ${file}`, async () => {
       expect(await validateFontFileName({ file })).toBe(false);
     });
-  });
+  };
 
   for (const { file, regex } of validCustomCases) {
     spec(`should validate ${file} with custom regex`, async () => {
       expect(await validateFontFileName({ file, regex })).toBe(true);
     });
-  });
+  };
 
   for (const { file, regex } of invalidCustomCases) {
     spec(`should not validate ${file} with custom regex`, async () => {
       expect(await validateFontFileName({ file, regex })).toBe(false);
     });
-  });
+  };
 });
