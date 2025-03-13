@@ -47,25 +47,25 @@ const invalidCustomCases = [
 ];
 
 describe('Validate Font File Name', () => {
-  validTestCases.forEach((file) => {
+  for (const file of validTestCases) {
     spec(`should validate ${file}`, async () => {
       expect(await validateFontFileName({ file })).toBe(true);
     });
   });
 
-  invalidTestCases.forEach((file) => {
+  for (const file of invalidTestCases) {
     spec(`should not validate ${file}`, async () => {
       expect(await validateFontFileName({ file })).toBe(false);
     });
   });
 
-  validCustomCases.forEach(({ file, regex }) => {
+  for (const { file, regex } of validCustomCases) {
     spec(`should validate ${file} with custom regex`, async () => {
       expect(await validateFontFileName({ file, regex })).toBe(true);
     });
   });
 
-  invalidCustomCases.forEach(({ file, regex }) => {
+  for (const { file, regex } of invalidCustomCases) {
     spec(`should not validate ${file} with custom regex`, async () => {
       expect(await validateFontFileName({ file, regex })).toBe(false);
     });
