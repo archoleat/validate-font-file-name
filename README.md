@@ -16,6 +16,8 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+Validate font file names.
+
 ## Installation
 
 ```shell
