@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.2.3](https://github.com/archoleat/validate-font-file-name/compare/v1.2.2...v1.2.3) (2025-08-17)
+
+### Bug Fixes
+
+* tslib ([#200](https://github.com/archoleat/validate-font-file-name/issues/200)) ([f122f87](https://github.com/archoleat/validate-font-file-name/commit/f122f8738f4c3a20555ffc475a11fcf2573cb6b5))
+* validate-font-file-name.spec.ts ([219f5cd](https://github.com/archoleat/validate-font-file-name/commit/219f5cde2329b9edf52c076170dbdc115f66b378))
+
+### Code Refactoring
+
+* .editorconfig-checker.json ([c1b0109](https://github.com/archoleat/validate-font-file-name/commit/c1b0109715420b112bfc09a6133a4ca97107a179))
+* actions ([#199](https://github.com/archoleat/validate-font-file-name/issues/199)) ([1a5d423](https://github.com/archoleat/validate-font-file-name/commit/1a5d423fcd45384fe742de39ca1805f840322810))
+* dependabot ([#193](https://github.com/archoleat/validate-font-file-name/issues/193)) ([097818f](https://github.com/archoleat/validate-font-file-name/commit/097818f44fabcbbf6801f78dacef11cdc8156b84))
+* ignore ([edfcaa7](https://github.com/archoleat/validate-font-file-name/commit/edfcaa7b92005189885aefff47f94638dd048bea))
+* remove comments ([4b96c45](https://github.com/archoleat/validate-font-file-name/commit/4b96c4540525dc61f95e135392c9ccf566c3d972))
+* rollup.config.ts ([15de7b1](https://github.com/archoleat/validate-font-file-name/commit/15de7b184a68363c8b71b06cd8dd7b4ae03b07cf))
+* validate-font-file-name.spec.ts ([4c76a26](https://github.com/archoleat/validate-font-file-name/commit/4c76a26f271da471db7128fb4f71843faea4f91e))
+
+### Documentation
+
+* **readme:** rewrite ([5e1e2ef](https://github.com/archoleat/validate-font-file-name/commit/5e1e2ef842a45ba3f39fa810c60e189a781b0a67))
+
 ## [1.2.2](https://github.com/archoleat/validate-font-file-name/compare/v1.2.1...v1.2.2) (2025-01-16)
 
 ### ⚠ BREAKING CHANGES
