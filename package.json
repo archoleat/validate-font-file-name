@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/validate-font-file-name",
   "description": "Validate font file names",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",
