@@ -51,7 +51,7 @@
     "@archoleat/reglib": "^1.9.0"
   },
   "devDependencies": {
-    "@archoleat/commitlint-define-config": "^1.1.0",
+    "@archoleat/commitlint-define-config": "^1.1.1",
     "@archoleat/eslint-flat-compatibility": "^1.2.1",
     "@archoleat/prettier-define-config": "^1.1.0",
     "@archoleat/semantic-release-define-config": "^1.2.0",
