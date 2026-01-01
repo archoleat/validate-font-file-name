@@ -55,7 +55,7 @@
     "@archoleat/prettier-define-config": "^1.2.1",
     "@archoleat/semantic-release-define-config": "^1.3.1",
     "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/config-conventional": "^20.3.0",
     "@commitlint/types": "^20.0.0",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-typescript": "^12.1.4",
