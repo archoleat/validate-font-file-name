@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/archoleat/validate-font-file-name/compare/v1.2.5...v1.2.6) (2026-09-15)
+
+### Bug Fixes
+
+* **ci:** declare TypeScript and use client-id ([b08ca57](https://github.com/archoleat/validate-font-file-name/commit/b08ca575e76ea879e43e73e32dfa49108f2f4e53))
+* **release:** use compatible changelog preset ([b76d04f](https://github.com/archoleat/validate-font-file-name/commit/b76d04f5ab6033efe41cca9649a5fddce839ed04))
+
 ## [1.2.5](https://github.com/archoleat/validate-font-file-name/compare/v1.2.4...v1.2.5) (2026-07-01)
 
 ### Bug Fixes
