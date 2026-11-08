@@ -18,7 +18,7 @@ const validateFontFileName = async (parameters: Parameters) => {
 
   const fileName = parse(file).base;
   const isRegex = typeof regex === 'string' && regex !== '';
-  const selectRegex = isRegex ? new RegExp(regex) : regex || FONT_FILE_NAME_REGEX;
+  const selectRegex = new RegExp(isRegex ? regex : regex || FONT_FILE_NAME_REGEX);
   const testFileName = selectRegex.test(fileName);
 
   if (!testFileName) {
