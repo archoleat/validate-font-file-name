@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.7](https://github.com/archoleat/validate-font-file-name/compare/v1.2.6...v1.2.7) (2026-11-08)
+
+### Bug Fixes
+
+* isolate custom regular expression state ([19c1807](https://github.com/archoleat/validate-font-file-name/commit/19c1807355a82dc00f39ad66d9ac068f15aad8ea))
+* use stable Node.js for releases ([549567b](https://github.com/archoleat/validate-font-file-name/commit/549567bafc3183ab2f44df17380131c5b8ad990f))
+
 ## [1.2.6](https://github.com/archoleat/validate-font-file-name/compare/v1.2.5...v1.2.6) (2026-09-15)
 
 ### Bug Fixes
