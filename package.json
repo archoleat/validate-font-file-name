@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/validate-font-file-name",
-  "description": "Validate font file names",
+  "description": "Check font filenames against a naming convention in Node.js",
   "version": "1.2.7",
   "license": "MIT",
   "author": {
@@ -18,12 +18,13 @@
   },
   "keywords": [
     "archoleat",
+    "font",
+    "font-filename",
+    "naming-convention",
+    "nodejs",
     "typescript",
-    "validate-font-file-name"
+    "validation"
   ],
-  "engines": {
-    "bun": ">=1.0.0"
-  },
   "type": "module",
   "types": "index.d.ts",
   "imports": {

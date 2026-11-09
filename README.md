@@ -12,11 +12,12 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Runtime](#runtime)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-Validate font file names.
+Check font filenames against a naming convention in Node.js.
 
 ## Installation
 
@@ -25,6 +26,12 @@ bun i @archoleat/validate-font-file-name
 ```
 
 Use `bun i -D @archoleat/validate-font-file-name` for build-only validation.
+
+## Runtime
+
+This ES module targets Node.js tooling: it uses `node:path` and a console
+notifier. It does not inspect font binaries or require the file to exist.
+Bun is used for repository tooling, not required by the published module.
 
 ## Usage
 
