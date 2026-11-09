@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.9](https://github.com/archoleat/validate-font-file-name/compare/v1.2.8...v1.2.9) (2026-11-09)
+
+### Bug Fixes
+
+* align npm keywords with repository topics ([89d25d8](https://github.com/archoleat/validate-font-file-name/commit/89d25d8c357c827fa469ede729677c9023ddb434))
+
 ## [1.2.8](https://github.com/archoleat/validate-font-file-name/compare/v1.2.7...v1.2.8) (2026-11-09)
 
 ### Bug Fixes
