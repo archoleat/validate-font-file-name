@@ -21,19 +21,49 @@ Validate font file names.
 ## Installation
 
 ```shell
-bun i -D @archoleat/validate-font-file-name
+bun i @archoleat/validate-font-file-name
 ```
+
+Use `bun i -D @archoleat/validate-font-file-name` for build-only validation.
 
 ## Usage
 
 ```js
 import { validateFontFileName } from '@archoleat/validate-font-file-name';
 
-await validateFontFileName({
-  file: string,
-  regex?: string | RegExp,
+const isValid = await validateFontFileName({
+  file: 'public/fonts/Roboto-Bold.woff2',
 });
+
+console.log(isValid); // true
 ```
+
+The function checks the basename, not the file's existence or font contents.
+It returns `Promise<boolean>` and logs a console error when validation fails.
+
+| Option | Type | Default |
+| --- | --- | --- |
+| `file` | `string` | Required |
+| `regex` | `string` or `RegExp` | Built-in naming pattern |
+
+`file` must be a non-empty filename or path. `regex` replaces the default
+pattern rather than adding a second validation step.
+
+A custom pattern can follow your project's naming convention:
+
+```js
+import { validateFontFileName } from '@archoleat/validate-font-file-name';
+
+const isValid = await validateFontFileName({
+  file: 'body.woff2',
+  regex: /^[a-z]+\.woff2$/,
+});
+
+console.log(isValid); // true
+```
+
+An invalid regular expression throws; handle that error if the pattern comes
+from user input.
 
 ### Naming Convention
 
