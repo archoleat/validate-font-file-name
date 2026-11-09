@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/validate-font-file-name",
   "description": "Check font filenames against a naming convention in Node.js",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",

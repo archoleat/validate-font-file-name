@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.8](https://github.com/archoleat/validate-font-file-name/compare/v1.2.7...v1.2.8) (2026-11-09)
+
+### Bug Fixes
+
+* publish current documentation and runtime guidance ([426802a](https://github.com/archoleat/validate-font-file-name/commit/426802abac4536686f0d29cecb6581d51acb8581))
+
+### Documentation
+
+* clarify usage and project constraints ([12d20d7](https://github.com/archoleat/validate-font-file-name/commit/12d20d74be1401955dd63cf50a34efa528b1fd8a))
+
 ## [1.2.7](https://github.com/archoleat/validate-font-file-name/compare/v1.2.6...v1.2.7) (2026-11-08)
 
 ### Bug Fixes
