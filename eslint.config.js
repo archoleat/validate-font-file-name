@@ -34,7 +34,13 @@ export default defineFlatConfig([
     },
     rules: {
       'import/exports-last': 'error',
-      'import/extensions': ['error', { ts: 'always' }],
+      'import/extensions': [
+        'error',
+        {
+          pattern: { ts: 'always' },
+          pathGroupOverrides: [{ pattern: '#*/**/*.js', action: 'ignore' }],
+        },
+      ],
       'import/group-exports': 'error',
       'import/no-commonjs': 'error',
       'import/no-default-export': 'off',

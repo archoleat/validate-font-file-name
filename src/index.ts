@@ -3,7 +3,7 @@ import { parse } from 'node:path';
 import { error } from '@archoleat/notifier';
 import { FONT_FILE_NAME_REGEX } from '@archoleat/reglib';
 
-import type { Parameters } from '#types/parameters.ts';
+import type { Parameters } from '#types/parameters.js';
 
 const validateFontFileName = async (parameters: Parameters) => {
   const { file, regex = '' } = parameters;
