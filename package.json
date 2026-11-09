@@ -18,10 +18,9 @@
   },
   "keywords": [
     "archoleat",
-    "font",
-    "font-filename",
-    "naming-convention",
-    "nodejs",
+    "file-naming",
+    "fonts",
+    "regex",
     "typescript",
     "validation"
   ],
