@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.10](https://github.com/archoleat/validate-font-file-name/compare/v1.2.9...v1.2.10) (2026-11-09)
+
+### Bug Fixes
+
+* align package description with repository metadata ([da61811](https://github.com/archoleat/validate-font-file-name/commit/da618112f23b86948ca160ad46aa90604aac260c))
+
 ## [1.2.9](https://github.com/archoleat/validate-font-file-name/compare/v1.2.8...v1.2.9) (2026-11-09)
 
 ### Bug Fixes

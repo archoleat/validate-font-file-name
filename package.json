@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/validate-font-file-name",
   "description": "Validate font filename conventions using a built-in pattern or a custom regular expression.",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",
